@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header component > should render correct elements 1`] = `
+<div>
+  <header
+    class="_header_63c2ea"
+  >
+    <h1>
+      GameVault
+    </h1>
+    <div
+      class="_navContainer_63c2ea"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        class=""
+        href="/shop"
+      >
+        Shop
+      </a>
+      <a
+        class=""
+        href="/about"
+      >
+        About
+      </a>
+    </div>
+  </header>
+</div>
+`;

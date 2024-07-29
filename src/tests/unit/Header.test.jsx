@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import Header from "../components/Header/Header";
+import Header from "../../components/Header/Header";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
-import routes from "../router/routes";
+import routes from "../../router/routes";
 import { expect } from "vitest";
 
 const router = createMemoryRouter(routes);
@@ -18,8 +18,10 @@ describe("Header component", () => {
     expect(screen.getByRole("heading")).toBeInTheDocument();
   });
 
-  test("should render home button", () => {
+  test("should render nav buttons", () => {
     render(<Header />, { wrapper: wrapper });
-    expect(screen.getByRole("link", { name: "Home" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /home/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /shop/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /about/i })).toBeInTheDocument();
   });
 });

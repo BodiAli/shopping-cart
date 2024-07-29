@@ -1,4 +1,4 @@
-import Cart from "../utils/cart";
+import Cart from "../../utils/cart";
 
 describe("Cart Class", () => {
   test("cart should include an array of products", () => {
