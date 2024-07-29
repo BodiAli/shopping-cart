@@ -1,0 +1,33 @@
+.header {
+  background-color: var(--gray);
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > h1 {
+  font-family: "Merriweather", Times, serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  background-image: url(/green-bg-text.jpg);
+  background-clip: text;
+  background-position: left;
+  color: transparent;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.navContainer > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--lighterGreen);
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  background-color: var(--darkerGray);
+}
