@@ -15,6 +15,6 @@ describe("Header component", () => {
 
   test("should render home button", () => {
     render(<Header />);
-    expect(screen.getByRole("button", { name: "Home" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Home" })).toBeInTheDocument();
   });
 });
