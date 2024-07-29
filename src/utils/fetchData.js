@@ -1,8 +1,13 @@
-async function getData(key) {
-  const response = await fetch(`/api/v1/games?api_key=${key}`);
+const API_KEY = "moby_EmWCjGDKP8Zp8WkkBolB5TI6ynj";
+
+async function getData(params) {
+  const response = await fetch(`/api/v1/games${params}api_key=${API_KEY}`);
+
+  if (!response.ok) {
+    throw new Error("Unexpected error occurred");
+  }
 
   const data = await response.json();
-  console.log(data);
+  return data;
 }
-
 export default getData;
