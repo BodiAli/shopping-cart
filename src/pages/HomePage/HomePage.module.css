@@ -15,6 +15,7 @@
   text-align: center;
   padding: 2rem;
   background-color: var(--darkerGreen);
+  box-shadow: inset 0px 0px 10px 5px var(--green);
 }
 
 .headerContainer > h2 {
@@ -116,7 +117,7 @@
   font-family: "Merriweather", Times, serif;
   font-size: 1.8rem;
   cursor: pointer;
-  animation: AnimationName 18s ease infinite;
+  animation: gradient-animation 18s ease infinite;
 }
 
 .shopNowButton:hover {
@@ -127,7 +128,7 @@
   filter: brightness(1.1);
 }
 
-@keyframes AnimationName {
+@keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
   }
