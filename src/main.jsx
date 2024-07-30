@@ -6,7 +6,6 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import "./reset.css";
 import HomePage, { loader as homePageLoader } from "./pages/HomePage/HomePage.jsx";
 
-//Todo: implement image carousel from data
 //TODO: Style ErrorPage
 
 const router = createBrowserRouter([
