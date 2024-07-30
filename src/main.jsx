@@ -6,7 +6,7 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import "./reset.css";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 
-//TODO: Style ErrorPage
+//TODO: Test ErrorPage && HomePage
 
 const router = createBrowserRouter([
   {
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
         element: <HomePage />,
         loader: HomePage.loader,
         errorElement: <ErrorPage />,
+      },
+      {
+        path: "shop",
+        element: <p>HIII</p>,
       },
     ],
   },
