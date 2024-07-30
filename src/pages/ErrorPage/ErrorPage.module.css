@@ -1,0 +1,38 @@
+.container {
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background: linear-gradient(270deg, var(--green), #7e7c7c);
+  background-size: 400% 400%;
+
+  animation: gradient-animation 7s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container > h1 {
+  font-size: 4rem;
+}
+
+.container > p {
+  font-size: 2rem;
+}
+
+.container > a {
+  font-size: 2rem;
+  color: black;
+}
