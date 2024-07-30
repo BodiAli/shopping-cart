@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import "./reset.css";
-import HomePage, { loader as homePageLoader } from "./pages/HomePage/HomePage.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
 
 //TODO: Style ErrorPage
 
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
-        loader: homePageLoader,
+        loader: HomePage.loader,
         errorElement: <ErrorPage />,
       },
     ],
