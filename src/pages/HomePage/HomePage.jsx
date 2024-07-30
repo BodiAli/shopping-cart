@@ -39,7 +39,7 @@ function HomePage() {
                   className={styles.backGround}
                   style={{ backgroundImage: `url(${item.sample_cover.thumbnail_image})` }}
                 ></div>
-                <img src={item.sample_cover.thumbnail_image} alt="" />
+                <img src={item.sample_cover.thumbnail_image} alt={`${item.title} game poster`} />
               </div>
               <div className={styles.descriptionContainer}>
                 <h3>{item.title}</h3>
@@ -49,9 +49,9 @@ function HomePage() {
           </SplideSlide>
         ))}
       </Splide>
-      <div className={styles.shopContainer}>
+      <section className={styles.shopContainer}>
         <button className={styles.shopNowButton}>Shop Now!</button>
-      </div>
+      </section>
     </main>
   );
 }
