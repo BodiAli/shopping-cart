@@ -1,15 +1,15 @@
 import { Link, useRouteError } from "react-router-dom";
+import styles from "./ErrorPage.module.css";
 
 function ErrorPage() {
   const error = useRouteError();
-
   return (
-    <>
-      <h1>Error Occured</h1>
-      <p>{error.statusText}</p>
-      <p>{error.message}</p>
+    <div className={styles.container}>
+      <h1>Looks like you are lost!</h1>
+      <p>{error.data}</p>
+      <p>{error.statusText || error.message}</p>
       <Link to="/">Head Back!</Link>
-    </>
+    </div>
   );
 }
 
