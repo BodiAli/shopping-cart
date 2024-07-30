@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import getData from "../../utils/fetchData";
-import back from "../../assets/back.svg";
-import forward from "../../assets/forward.svg";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css/sea-green";
 import styles from "./HomePage.module.css";
 
 function HomePage() {
@@ -21,32 +21,36 @@ function HomePage() {
           casual gamer or a hardcore enthusiast, we have everything you need to elevate your gaming experience
         </p>
       </div>
-      <div className={styles.carousel}>
-        <button>
-          <img src={back} alt="back" />
-        </button>
-        <div className={styles.card}>
-          <div className={styles.imageContainer}>
-            <div
-              className={styles.backGround}
-              style={{ backgroundImage: `url(${data[0].sample_cover.thumbnail_image})` }}
-            ></div>
-            <img src={data[0].sample_cover.thumbnail_image} alt="" />
-          </div>
-          <div className={styles.descriptionContainer}>
-            <h3>{data[0].title}</h3>
-            <div dangerouslySetInnerHTML={{ __html: data[0].description }}></div>
-          </div>
-        </div>
-        <button>
-          <img src={forward} alt="forward" />
-        </button>
-        <div className={styles.pagination}>
-          <div className={styles.circle}></div>
-          <div className={styles.circle}></div>
-          <div className={styles.circle}></div>
-          <div className={styles.circle}></div>
-        </div>
+      <Splide
+        tag="section"
+        options={{
+          type: "loop",
+          drag: true,
+          autoplay: true,
+          interval: 5000,
+        }}
+        className={styles.carousel}
+      >
+        {data.map((item, index) => (
+          <SplideSlide key={index}>
+            <div className={styles.card}>
+              <div className={styles.imageContainer}>
+                <div
+                  className={styles.backGround}
+                  style={{ backgroundImage: `url(${item.sample_cover.thumbnail_image})` }}
+                ></div>
+                <img src={item.sample_cover.thumbnail_image} alt="" />
+              </div>
+              <div className={styles.descriptionContainer}>
+                <h3>{item.title}</h3>
+                <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
+              </div>
+            </div>
+          </SplideSlide>
+        ))}
+      </Splide>
+      <div className={styles.shopContainer}>
+        <button className={styles.shopNowButton}>Shop Now!</button>
       </div>
     </main>
   );
