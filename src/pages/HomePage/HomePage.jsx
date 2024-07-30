@@ -6,7 +6,6 @@ import styles from "./HomePage.module.css";
 
 function HomePage() {
   const data = useLoaderData();
-  console.log(data);
 
   return (
     <main className={styles.main}>
