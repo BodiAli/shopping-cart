@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
-import { expect, vi } from "vitest";
+import { vi } from "vitest";
 import HomePage from "../../pages/HomePage/HomePage";
 
 const MOCK_GAMES = {

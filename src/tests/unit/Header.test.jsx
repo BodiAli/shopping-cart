@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
-import { expect } from "vitest";
 import Header from "../../components/Header/Header";
 
 const router = createMemoryRouter([
