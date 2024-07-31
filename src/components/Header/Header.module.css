@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--gray);
+  background-color: var(--primary);
   padding: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,8 @@
   font-weight: bold;
   background-image: url(/green-bg-text.jpg);
   background-clip: text;
-  background-position: left;
+  background-position: center;
+  filter: brightness(1.8);
   color: transparent;
 }
 
