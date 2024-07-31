@@ -1,0 +1,11 @@
+.main {
+  background-color: var(--green);
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.aside {
+  background-color: var(--gray);
+  border-radius: 5px;
+  height: calc(100vh - 83px);
+}
