@@ -3,10 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
-import "./reset.css";
 import HomePage from "./pages/HomePage/HomePage.jsx";
-
-//TODO: Test ErrorPage && HomePage
+import ShopPage from "./pages/ShopPage/ShopPage.jsx";
+import "./reset.css";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: "shop",
-        element: <p>HIII</p>,
+        element: <ShopPage />,
       },
     ],
   },
