@@ -6,7 +6,7 @@ function ErrorPage() {
   return (
     <div className={styles.container}>
       <h1>Looks like you are lost!</h1>
-      <p>{error.data}</p>
+      {error.data && <p>{error.data}</p>}
       <p>{error.statusText || error.message}</p>
       <Link to="/">Head Back!</Link>
     </div>
