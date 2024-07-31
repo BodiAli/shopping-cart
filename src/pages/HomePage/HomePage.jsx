@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import getData from "../../utils/fetchData";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/sea-green";
@@ -21,6 +21,7 @@ function HomePage() {
         </p>
       </div>
       <Splide
+        data-testid="carousel"
         tag="section"
         options={{
           type: "loop",
@@ -49,7 +50,9 @@ function HomePage() {
         ))}
       </Splide>
       <section className={styles.shopContainer}>
-        <button className={styles.shopNowButton}>Shop Now!</button>
+        <Link to="shop" className={styles.shopNowLink}>
+          Shop Now!
+        </Link>
       </section>
     </main>
   );
