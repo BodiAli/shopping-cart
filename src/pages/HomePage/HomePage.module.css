@@ -108,7 +108,9 @@
   align-items: center;
 }
 
-.shopNowButton {
+.shopNowLink {
+  text-decoration: none;
+  color: black;
   background: linear-gradient(270deg, #00c896, #7e7c7c);
   background-size: 400% 400%;
   border: none;
@@ -120,11 +122,11 @@
   animation: gradient-animation 18s ease infinite;
 }
 
-.shopNowButton:hover {
+.shopNowLink:hover {
   filter: brightness(0.8);
 }
 
-.shopNowButton:active {
+.shopNowLink:active {
   filter: brightness(1.1);
 }
 
