@@ -1,0 +1,353 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home page default component > should render correct elements 1`] = `
+<div>
+  <main
+    class="_main_ea6e48"
+  >
+    <div
+      class="_headerContainer_ea6e48"
+    >
+      <h2>
+        Welcome to GameVault
+        <br />
+        Your Ultimate Video Game Destination
+      </h2>
+      <p>
+        Discover a vast selection of video games across all genres and platforms. Whether you're a casual gamer or a hardcore enthusiast, we have everything you need to elevate your gaming experience
+      </p>
+    </div>
+    <section
+      aria-roledescription="carousel"
+      class="splide _carousel_ea6e48 splide--loop splide--ltr splide--draggable is-active is-initialized"
+      data-testid="carousel"
+      id="splide01"
+    >
+      <div
+        class="splide__arrows splide__arrows--ltr"
+      >
+        <button
+          aria-controls="splide01-track"
+          aria-label="Go to last slide"
+          class="splide__arrow splide__arrow--prev"
+          type="button"
+        >
+          <svg
+            focusable="false"
+            height="40"
+            viewBox="0 0 40 40"
+            width="40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
+            />
+          </svg>
+        </button>
+        <button
+          aria-controls="splide01-track"
+          aria-label="Next slide"
+          class="splide__arrow splide__arrow--next"
+          type="button"
+        >
+          <svg
+            focusable="false"
+            height="40"
+            viewBox="0 0 40 40"
+            width="40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        aria-atomic="true"
+        aria-live="off"
+        class="splide__track splide__track--loop splide__track--ltr splide__track--draggable"
+        id="splide01-track"
+        style="padding-left: 0px; padding-right: 0px;"
+      >
+        <ul
+          class="splide__list"
+          id="splide01-list"
+          role="presentation"
+          style="transform: translateX(0px);"
+        >
+          <li
+            aria-label="2 of 3"
+            aria-roledescription="slide"
+            class="splide__slide splide__slide--clone is-visible"
+            id="splide01-clone01"
+            role="tabpanel"
+          >
+            <div
+              class="_card_ea6e48"
+            >
+              <div
+                class="_imageContainer_ea6e48"
+              >
+                <div
+                  class="_backGround_ea6e48"
+                  style="background-image: url(undefined);"
+                />
+                <img
+                  alt="COD game game poster"
+                />
+              </div>
+              <div
+                class="_descriptionContainer_ea6e48"
+              >
+                <h3>
+                  COD game
+                </h3>
+                <div />
+              </div>
+            </div>
+          </li>
+          <li
+            aria-label="3 of 3"
+            aria-roledescription="slide"
+            class="splide__slide splide__slide--clone is-visible is-prev"
+            id="splide01-clone02"
+            role="tabpanel"
+          >
+            <div
+              class="_card_ea6e48"
+            >
+              <div
+                class="_imageContainer_ea6e48"
+              >
+                <div
+                  class="_backGround_ea6e48"
+                  style="background-image: url(undefined);"
+                />
+                <img
+                  alt="Minecraft game game poster"
+                />
+              </div>
+              <div
+                class="_descriptionContainer_ea6e48"
+              >
+                <h3>
+                  Minecraft game
+                </h3>
+                <div />
+              </div>
+            </div>
+          </li>
+          <li
+            aria-label="1 of 3"
+            aria-roledescription="slide"
+            class="splide__slide is-active is-visible"
+            id="splide01-slide01"
+            role="tabpanel"
+          >
+            <div
+              class="_card_ea6e48"
+            >
+              <div
+                class="_imageContainer_ea6e48"
+              >
+                <div
+                  class="_backGround_ea6e48"
+                  style="background-image: url(undefined);"
+                />
+                <img
+                  alt="Fifa game game poster"
+                />
+              </div>
+              <div
+                class="_descriptionContainer_ea6e48"
+              >
+                <h3>
+                  Fifa game
+                </h3>
+                <div />
+              </div>
+            </div>
+          </li>
+          <li
+            aria-label="2 of 3"
+            aria-roledescription="slide"
+            class="splide__slide is-visible is-next"
+            id="splide01-slide02"
+            role="tabpanel"
+          >
+            <div
+              class="_card_ea6e48"
+            >
+              <div
+                class="_imageContainer_ea6e48"
+              >
+                <div
+                  class="_backGround_ea6e48"
+                  style="background-image: url(undefined);"
+                />
+                <img
+                  alt="COD game game poster"
+                />
+              </div>
+              <div
+                class="_descriptionContainer_ea6e48"
+              >
+                <h3>
+                  COD game
+                </h3>
+                <div />
+              </div>
+            </div>
+          </li>
+          <li
+            aria-label="3 of 3"
+            aria-roledescription="slide"
+            class="splide__slide is-visible"
+            id="splide01-slide03"
+            role="tabpanel"
+          >
+            <div
+              class="_card_ea6e48"
+            >
+              <div
+                class="_imageContainer_ea6e48"
+              >
+                <div
+                  class="_backGround_ea6e48"
+                  style="background-image: url(undefined);"
+                />
+                <img
+                  alt="Minecraft game game poster"
+                />
+              </div>
+              <div
+                class="_descriptionContainer_ea6e48"
+              >
+                <h3>
+                  Minecraft game
+                </h3>
+                <div />
+              </div>
+            </div>
+          </li>
+          <li
+            aria-label="1 of 3"
+            aria-roledescription="slide"
+            class="splide__slide splide__slide--clone is-active is-visible"
+            id="splide01-clone03"
+            role="tabpanel"
+          >
+            <div
+              class="_card_ea6e48"
+            >
+              <div
+                class="_imageContainer_ea6e48"
+              >
+                <div
+                  class="_backGround_ea6e48"
+                  style="background-image: url(undefined);"
+                />
+                <img
+                  alt="Fifa game game poster"
+                />
+              </div>
+              <div
+                class="_descriptionContainer_ea6e48"
+              >
+                <h3>
+                  Fifa game
+                </h3>
+                <div />
+              </div>
+            </div>
+          </li>
+          <li
+            aria-label="2 of 3"
+            aria-roledescription="slide"
+            class="splide__slide splide__slide--clone is-visible"
+            id="splide01-clone04"
+            role="tabpanel"
+          >
+            <div
+              class="_card_ea6e48"
+            >
+              <div
+                class="_imageContainer_ea6e48"
+              >
+                <div
+                  class="_backGround_ea6e48"
+                  style="background-image: url(undefined);"
+                />
+                <img
+                  alt="COD game game poster"
+                />
+              </div>
+              <div
+                class="_descriptionContainer_ea6e48"
+              >
+                <h3>
+                  COD game
+                </h3>
+                <div />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul
+        aria-label="Select a slide to show"
+        class="splide__pagination splide__pagination--ltr"
+        role="tablist"
+      >
+        <li
+          role="presentation"
+        >
+          <button
+            aria-controls="splide01-slide01"
+            aria-label="Go to slide 1"
+            aria-selected="true"
+            class="splide__pagination__page is-active"
+            role="tab"
+            type="button"
+          />
+        </li>
+        <li
+          role="presentation"
+        >
+          <button
+            aria-controls="splide01-slide02"
+            aria-label="Go to slide 2"
+            class="splide__pagination__page"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          />
+        </li>
+        <li
+          role="presentation"
+        >
+          <button
+            aria-controls="splide01-slide03"
+            aria-label="Go to slide 3"
+            class="splide__pagination__page"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          />
+        </li>
+      </ul>
+    </section>
+    <section
+      class="_shopContainer_ea6e48"
+    >
+      <a
+        class="_shopNowLink_ea6e48"
+        href="/shop"
+      >
+        Shop Now!
+      </a>
+    </section>
+  </main>
+</div>
+`;
