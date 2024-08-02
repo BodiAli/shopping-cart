@@ -75,6 +75,6 @@ describe("Home page default component", () => {
     render(<HomePage />, { wrapper });
     const shopNowLink = screen.getByRole("link", { name: /shop now/i });
     expect(shopNowLink).toBeInTheDocument();
-    expect(shopNowLink).toHaveAttribute("href", "/shop");
+    expect(shopNowLink).toHaveAttribute("href", "/shop/games");
   });
 });
