@@ -20,7 +20,7 @@ exports[`Header component > should render correct elements 1`] = `
       </a>
       <a
         class=""
-        href="/shop"
+        href="/shop/games"
       >
         Shop
       </a>

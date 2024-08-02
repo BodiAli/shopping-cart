@@ -343,7 +343,7 @@ exports[`Home page default component > should render correct elements 1`] = `
     >
       <a
         class="_shopNowLink_ea6e48"
-        href="/shop"
+        href="/shop/games"
       >
         Shop Now!
       </a>

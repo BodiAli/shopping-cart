@@ -1,0 +1,64 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Category component > should render correct elements 1`] = `
+<div>
+  <section
+    class="_section_0a39a7"
+  >
+    <div
+      class="_card_0a39a7"
+    >
+      <div
+        class="_imageContainer_0a39a7"
+      >
+        <div
+          class="_backGround_0a39a7"
+          style="background-image: url(undefined);"
+        />
+        <img
+          alt="Fifa game game poster"
+        />
+      </div>
+      <h3>
+        Fifa game
+      </h3>
+    </div>
+    <div
+      class="_card_0a39a7"
+    >
+      <div
+        class="_imageContainer_0a39a7"
+      >
+        <div
+          class="_backGround_0a39a7"
+          style="background-image: url(undefined);"
+        />
+        <img
+          alt="COD game game poster"
+        />
+      </div>
+      <h3>
+        COD game
+      </h3>
+    </div>
+    <div
+      class="_card_0a39a7"
+    >
+      <div
+        class="_imageContainer_0a39a7"
+      >
+        <div
+          class="_backGround_0a39a7"
+          style="background-image: url(undefined);"
+        />
+        <img
+          alt="Minecraft game game poster"
+        />
+      </div>
+      <h3>
+        Minecraft game
+      </h3>
+    </div>
+  </section>
+</div>
+`;
