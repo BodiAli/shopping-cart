@@ -14,29 +14,29 @@ function ShopPage() {
         <ul className={styles.navigation}>
           <NavLink to="windows">Windows</NavLink>
 
-          <NavLink to="linux">Linux</NavLink>
-
           <NavLink to="mac">Mac</NavLink>
+
+          <NavLink to="linux">Linux</NavLink>
         </ul>
         <h2>Genres</h2>
         <ul className={styles.navigation}>
-          <NavLink>Action</NavLink>
+          <NavLink to="action">Action</NavLink>
 
-          <NavLink>Adventure</NavLink>
+          <NavLink to="adventure">Adventure</NavLink>
 
-          <NavLink>Education</NavLink>
+          <NavLink to="education">Education</NavLink>
 
-          <NavLink>Arcade</NavLink>
+          <NavLink to="arcade">Arcade</NavLink>
 
-          <NavLink>Racing</NavLink>
+          <NavLink to="racing">Racing</NavLink>
 
-          <NavLink>Simulation</NavLink>
+          <NavLink to="simulation">Simulation</NavLink>
 
-          <NavLink>Sports</NavLink>
+          <NavLink to="sports">Sports</NavLink>
 
-          <NavLink>Strategy</NavLink>
+          <NavLink to="strategy">Strategy</NavLink>
 
-          <NavLink>Role Playing</NavLink>
+          <NavLink to="role-playing">Role Playing</NavLink>
         </ul>
       </aside>
       <Outlet />
