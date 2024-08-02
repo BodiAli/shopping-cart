@@ -26,8 +26,10 @@
 
 .navContainer > a {
   text-decoration: none;
-  color: var(--darkerGreen);
+  font-weight: 500;
+  color: var(--navText);
   padding: 0.6rem 1.2rem;
   border-radius: 5px;
   background-color: var(--darkerGray);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.775);
 }
