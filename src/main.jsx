@@ -8,6 +8,8 @@ import ShopPage from "./pages/ShopPage/ShopPage.jsx";
 import Category from "./components/Category/Category.jsx";
 import "./reset.css";
 
+//TODO: Add test for errors in Category component
+
 const router = createBrowserRouter([
   {
     path: "/",
