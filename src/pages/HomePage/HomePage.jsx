@@ -50,7 +50,7 @@ function HomePage() {
         ))}
       </Splide>
       <section className={styles.shopContainer}>
-        <Link to="shop" className={styles.shopNowLink}>
+        <Link to="shop/games" className={styles.shopNowLink}>
           Shop Now!
         </Link>
       </section>
