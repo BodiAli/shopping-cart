@@ -8,7 +8,7 @@ function Header() {
         <h1>GameVault</h1>
         <div className={styles.navContainer}>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="shop">Shop</NavLink>
+          <NavLink to="shop/games">Shop</NavLink>
           <NavLink to="about">About</NavLink>
         </div>
       </header>
