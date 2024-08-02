@@ -38,7 +38,7 @@ describe("Header component", () => {
     expect(aboutLink).toBeInTheDocument();
 
     expect(homeLink).toHaveAttribute("href", "/");
-    expect(shopLink).toHaveAttribute("href", "/shop");
+    expect(shopLink).toHaveAttribute("href", "/shop/games");
     expect(aboutLink).toHaveAttribute("href", "/about");
   });
 });
