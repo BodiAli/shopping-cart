@@ -1,23 +1,45 @@
+import { NavLink, Outlet } from "react-router-dom";
 import styles from "./ShopPage.module.css";
 
 function ShopPage() {
   return (
     <main className={styles.main}>
       <aside className={styles.aside}>
-        <ul>
-          <li>All</li>
-          <li>Action</li>
-          <li>Adventure</li>
-          <li>Simulation</li>
+        <h2>Games</h2>
+        <ul className={styles.navigation}>
+          <NavLink to="games">Games</NavLink>
+        </ul>
+
+        <h2>Platforms</h2>
+        <ul className={styles.navigation}>
+          <NavLink to="windows">Windows</NavLink>
+
+          <NavLink to="linux">Linux</NavLink>
+
+          <NavLink to="mac">Mac</NavLink>
+        </ul>
+        <h2>Genres</h2>
+        <ul className={styles.navigation}>
+          <NavLink>Action</NavLink>
+
+          <NavLink>Adventure</NavLink>
+
+          <NavLink>Education</NavLink>
+
+          <NavLink>Arcade</NavLink>
+
+          <NavLink>Racing</NavLink>
+
+          <NavLink>Simulation</NavLink>
+
+          <NavLink>Sports</NavLink>
+
+          <NavLink>Strategy</NavLink>
+
+          <NavLink>Role Playing</NavLink>
         </ul>
       </aside>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias optio quis ullam dolores
-          assumenda distinctio necessitatibus soluta et, doloribus nulla explicabo quidem nesciunt
-          exercitationem cupiditate iste voluptatibus aperiam architecto!
-        </p>
-      </section>
+      <Outlet />
     </main>
   );
 }
