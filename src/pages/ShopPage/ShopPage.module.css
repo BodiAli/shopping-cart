@@ -7,5 +7,38 @@
 .aside {
   background-color: var(--gray);
   border-radius: 5px;
-  height: calc(100vh - 83px);
+  max-height: calc(100vh - 83px);
+  overflow-y: auto;
+  padding: 1.5rem 0;
+}
+
+.aside > h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 0 0.5rem;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.775);
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.navigation:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.navigation a {
+  color: var(--navText);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.775);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem 0.5rem;
+  background-color: var(--darkerGray);
+}
+
+.navigation a:hover {
+  filter: brightness(1.1);
 }
