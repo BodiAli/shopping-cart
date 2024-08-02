@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import ShopPage from "./pages/ShopPage/ShopPage.jsx";
+import Category from "./components/Category/Category.jsx";
 import "./reset.css";
 
 const router = createBrowserRouter([
@@ -22,6 +23,13 @@ const router = createBrowserRouter([
       {
         path: "shop",
         element: <ShopPage />,
+        children: [
+          {
+            path: ":category",
+            element: <Category />,
+            loader: Category.loader,
+          },
+        ],
       },
     ],
   },
