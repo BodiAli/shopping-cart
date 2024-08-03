@@ -2,7 +2,9 @@
 
 exports[`Error component > should render correct elements 1`] = `
 <div>
-  <section>
+  <section
+    class="_section_6dffa1"
+  >
     <h2>
       Unexpected error occurred!
     </h2>

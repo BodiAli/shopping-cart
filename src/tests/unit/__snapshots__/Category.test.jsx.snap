@@ -59,6 +59,7 @@ exports[`Category component > should render correct elements 1`] = `
         Minecraft game
       </h3>
     </div>
+    ;
   </section>
 </div>
 `;

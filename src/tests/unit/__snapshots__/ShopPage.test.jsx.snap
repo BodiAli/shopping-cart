@@ -45,6 +45,24 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           Linux
         </a>
+        <a
+          class=""
+          href="/playstation"
+        >
+          Playstation
+        </a>
+        <a
+          class=""
+          href="/android"
+        >
+          Android
+        </a>
+        <a
+          class=""
+          href="/iphone"
+        >
+          iPhone
+        </a>
       </ul>
       <h2>
         Genres
@@ -68,7 +86,13 @@ exports[`Shop page > should render correct elements 1`] = `
           class=""
           href="/education"
         >
-          Education
+          Educational
+        </a>
+        <a
+          class=""
+          href="/puzzle"
+        >
+          Puzzle
         </a>
         <a
           class=""
@@ -90,21 +114,9 @@ exports[`Shop page > should render correct elements 1`] = `
         </a>
         <a
           class=""
-          href="/sports"
-        >
-          Sports
-        </a>
-        <a
-          class=""
           href="/strategy"
         >
           Strategy
-        </a>
-        <a
-          class=""
-          href="/role-playing"
-        >
-          Role Playing
         </a>
       </ul>
     </aside>
