@@ -9,6 +9,10 @@ import ShopPage from "./pages/ShopPage/ShopPage.jsx";
 import Category from "./components/Category/Category.jsx";
 import "./reset.css";
 
+//TODO: Add a style when navlink is clicked
+//TODO: Implement cart
+//TODO: Implement product page
+
 const router = createBrowserRouter([
   {
     path: "/",
