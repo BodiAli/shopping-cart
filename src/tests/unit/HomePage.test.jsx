@@ -38,6 +38,12 @@ const router = createMemoryRouter([
 
 const wrapper = () => <RouterProvider router={router} />;
 
+vi.mock("../../utils/generatePrice", () => {
+  return {
+    default: vi.fn(() => "50.00"),
+  };
+});
+
 describe("Home page default component", () => {
   test("should render correct elements", () => {
     const { container } = render(<HomePage />, { wrapper });
@@ -59,6 +65,15 @@ describe("Home page default component", () => {
     const games = screen.getAllByRole("heading", { name: /game$/i });
     games.forEach((game) => {
       expect(game).toBeInTheDocument();
+    });
+  });
+
+  test("each game should have a price", () => {
+    render(<HomePage />, { wrapper });
+    const prices = screen.getAllByText(/50.00/);
+
+    prices.forEach((price) => {
+      expect(price).toBeInTheDocument();
     });
   });
 

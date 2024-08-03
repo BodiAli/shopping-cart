@@ -49,6 +49,12 @@ Category.loader = vi.fn(({ params }) => {
   }
 });
 
+vi.mock("../../utils/generatePrice", () => {
+  return {
+    default: vi.fn(() => "50.00"),
+  };
+});
+
 const routes = [
   {
     path: "/:category",
@@ -84,6 +90,15 @@ describe("Category component", () => {
 
     gamesTitle.forEach((title) => {
       expect(title).toBeInTheDocument();
+    });
+  });
+
+  test("each game should have a price", () => {
+    render(<Category />, { wrapper });
+    const prices = screen.getAllByText(/50.00/);
+
+    prices.forEach((price) => {
+      expect(price).toBeInTheDocument();
     });
   });
 
