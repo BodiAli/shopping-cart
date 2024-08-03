@@ -30,7 +30,7 @@ async function loader({ params }) {
     const data = await getData("?");
     return data.games;
   }
-  return null;
+  throw new Error("Data not found");
 }
 
 Category.loader = loader;
