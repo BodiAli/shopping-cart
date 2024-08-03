@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { vi } from "vitest";
 import Category from "../../components/Category/Category";
+import ErrorComponent from "../../components/ErrorComponent/ErrorComponent";
 
 const MOCK_GAMES = {
   games: [
@@ -39,12 +40,12 @@ const MOCK_ACTION = {
 Category.loader = vi.fn(({ params }) => {
   switch (params.category) {
     case "games":
-      return MOCK_GAMES.games;
+      return { data: MOCK_GAMES };
 
     case "action":
-      return MOCK_ACTION.games;
+      return { data: MOCK_ACTION };
     default:
-      return null;
+      throw new Error("Data not found");
   }
 });
 
@@ -52,13 +53,14 @@ const routes = [
   {
     path: "/:category",
     element: <Category />,
+    errorElement: <ErrorComponent />,
     loader: Category.loader,
   },
 ];
 
 function createTestWrapper(initialIndex) {
   const router = createMemoryRouter(routes, {
-    initialEntries: ["/games", "/action"],
+    initialEntries: ["/games", "/action", "/shirts"],
     initialIndex,
   });
 
@@ -68,6 +70,7 @@ function createTestWrapper(initialIndex) {
 }
 const wrapper = createTestWrapper(0);
 const wrapper2 = createTestWrapper(1);
+const wrapper3 = createTestWrapper(2);
 
 describe("Category component", () => {
   test("should render correct elements", () => {
@@ -100,5 +103,10 @@ describe("Category component", () => {
     gamesTitle.forEach((title) => {
       expect(title).toBeInTheDocument();
     });
+  });
+
+  test("should display an error message when category is not found", () => {
+    render(<Category />, { wrapper: wrapper3 });
+    expect(screen.getByText(/data not found/i)).toBeInTheDocument();
   });
 });
