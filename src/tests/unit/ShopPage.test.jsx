@@ -34,14 +34,20 @@ describe("Shop page", () => {
     const windowsNav = screen.getByRole("link", { name: /windows/i });
     const macNav = screen.getByRole("link", { name: /mac/i });
     const linuxNav = screen.getByRole("link", { name: /linux/i });
+    const androidNav = screen.getByRole("link", { name: /android/i });
+    const iPhoneNav = screen.getByRole("link", { name: /iphone/i });
 
     expect(windowsNav).toBeInTheDocument();
     expect(macNav).toBeInTheDocument();
     expect(linuxNav).toBeInTheDocument();
+    expect(androidNav).toBeInTheDocument();
+    expect(iPhoneNav).toBeInTheDocument();
 
     expect(windowsNav).toHaveAttribute("href", "/windows");
     expect(macNav).toHaveAttribute("href", "/mac");
     expect(linuxNav).toHaveAttribute("href", "/linux");
+    expect(androidNav).toHaveAttribute("href", "/android");
+    expect(iPhoneNav).toHaveAttribute("href", "/iphone");
   });
 
   test("should render genres navigation", () => {
@@ -54,9 +60,8 @@ describe("Shop page", () => {
     const arcadeNav = screen.getByRole("link", { name: /arcade/i });
     const racingNav = screen.getByRole("link", { name: /racing/i });
     const simulationNav = screen.getByRole("link", { name: /simulation/i });
-    const sportsNav = screen.getByRole("link", { name: /sports/i });
+    const puzzleNav = screen.getByRole("link", { name: /puzzle/i });
     const strategyNav = screen.getByRole("link", { name: /strategy/i });
-    const rolePlayingNav = screen.getByRole("link", { name: /role playing/i });
 
     expect(actionNav).toBeInTheDocument();
     expect(adventureNav).toBeInTheDocument();
@@ -64,9 +69,8 @@ describe("Shop page", () => {
     expect(arcadeNav).toBeInTheDocument();
     expect(racingNav).toBeInTheDocument();
     expect(simulationNav).toBeInTheDocument();
-    expect(sportsNav).toBeInTheDocument();
+    expect(puzzleNav).toBeInTheDocument();
     expect(strategyNav).toBeInTheDocument();
-    expect(rolePlayingNav).toBeInTheDocument();
 
     expect(actionNav).toHaveAttribute("href", "/action");
     expect(adventureNav).toHaveAttribute("href", "/adventure");
@@ -74,8 +78,7 @@ describe("Shop page", () => {
     expect(arcadeNav).toHaveAttribute("href", "/arcade");
     expect(racingNav).toHaveAttribute("href", "/racing");
     expect(simulationNav).toHaveAttribute("href", "/simulation");
-    expect(sportsNav).toHaveAttribute("href", "/sports");
+    expect(puzzleNav).toHaveAttribute("href", "/puzzle");
     expect(strategyNav).toHaveAttribute("href", "/strategy");
-    expect(rolePlayingNav).toHaveAttribute("href", "/role-playing");
   });
 });
