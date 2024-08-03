@@ -91,6 +91,10 @@
   font-family: "Merriweather", Times, serif;
 }
 
+.descriptionContainer > .price {
+  font-size: 1.2rem;
+}
+
 .descriptionContainer > div {
   display: flex;
   flex-direction: column;
