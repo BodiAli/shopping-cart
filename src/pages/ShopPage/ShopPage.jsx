@@ -17,6 +17,12 @@ function ShopPage() {
           <NavLink to="mac">Mac</NavLink>
 
           <NavLink to="linux">Linux</NavLink>
+
+          <NavLink to="playstation">Playstation</NavLink>
+
+          <NavLink to="android">Android</NavLink>
+
+          <NavLink to="iphone">iPhone</NavLink>
         </ul>
         <h2>Genres</h2>
         <ul className={styles.navigation}>
@@ -24,7 +30,9 @@ function ShopPage() {
 
           <NavLink to="adventure">Adventure</NavLink>
 
-          <NavLink to="education">Education</NavLink>
+          <NavLink to="education">Educational</NavLink>
+
+          <NavLink to="puzzle">Puzzle</NavLink>
 
           <NavLink to="arcade">Arcade</NavLink>
 
@@ -32,11 +40,7 @@ function ShopPage() {
 
           <NavLink to="simulation">Simulation</NavLink>
 
-          <NavLink to="sports">Sports</NavLink>
-
           <NavLink to="strategy">Strategy</NavLink>
-
-          <NavLink to="role-playing">Role Playing</NavLink>
         </ul>
       </aside>
       <Outlet />
