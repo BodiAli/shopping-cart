@@ -97,8 +97,6 @@ describe("Category component", () => {
     render(<Category />, { wrapper: wrapper2 });
     const gamesTitle = screen.getAllByRole("heading", { name: /action$/i });
 
-    screen.debug();
-
     gamesTitle.forEach((title) => {
       expect(title).toBeInTheDocument();
     });
