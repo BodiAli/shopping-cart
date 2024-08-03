@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
+import ErrorComponent from "./components/ErrorComponent/ErrorComponent.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import ShopPage from "./pages/ShopPage/ShopPage.jsx";
 import Category from "./components/Category/Category.jsx";
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
         loader: HomePage.loader,
-        errorElement: <ErrorPage />,
+        errorElement: <ErrorComponent />,
       },
       {
         path: "shop",
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
             path: ":category",
             element: <Category />,
             loader: Category.loader,
+            errorElement: <ErrorComponent />,
           },
         ],
       },
