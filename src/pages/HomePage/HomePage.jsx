@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
-import getData from "../../utils/fetchData";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import getData from "../../utils/fetchData";
+import generatePrice from "../../utils/generatePrice";
 import "@splidejs/react-splide/css/sea-green";
 import styles from "./HomePage.module.css";
 
@@ -31,23 +32,27 @@ function HomePage() {
         }}
         className={styles.carousel}
       >
-        {data.map((item, index) => (
-          <SplideSlide key={index}>
-            <div className={styles.card}>
-              <div className={styles.imageContainer}>
-                <div
-                  className={styles.backGround}
-                  style={{ backgroundImage: `url(${item.sample_cover.thumbnail_image})` }}
-                ></div>
-                <img src={item.sample_cover.thumbnail_image} alt={`${item.title} game poster`} />
+        {data.map((item, index) => {
+          item.price = generatePrice();
+          return (
+            <SplideSlide key={index}>
+              <div className={styles.card}>
+                <div className={styles.imageContainer}>
+                  <div
+                    className={styles.backGround}
+                    style={{ backgroundImage: `url(${item.sample_cover.thumbnail_image})` }}
+                  ></div>
+                  <img src={item.sample_cover.thumbnail_image} alt={`${item.title} game poster`} />
+                </div>
+                <div className={styles.descriptionContainer}>
+                  <h3>{item.title}</h3>
+                  <p className={styles.price}>{`Price: ${item.price}$`}</p>
+                  <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
+                </div>
               </div>
-              <div className={styles.descriptionContainer}>
-                <h3>{item.title}</h3>
-                <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
-              </div>
-            </div>
-          </SplideSlide>
-        ))}
+            </SplideSlide>
+          );
+        })}
       </Splide>
       <section className={styles.shopContainer}>
         <Link to="shop/games" className={styles.shopNowLink}>
