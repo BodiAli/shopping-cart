@@ -19,9 +19,21 @@ exports[`Category component > should render correct elements 1`] = `
           alt="Fifa game game poster"
         />
       </div>
-      <h3>
-        Fifa game
-      </h3>
+      <div
+        class="_textContainer_0a39a7"
+      >
+        <h3>
+          Fifa game
+        </h3>
+        <div>
+          <p>
+            Price: 50.00$
+          </p>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
     </div>
     <div
       class="_card_0a39a7"
@@ -37,9 +49,21 @@ exports[`Category component > should render correct elements 1`] = `
           alt="COD game game poster"
         />
       </div>
-      <h3>
-        COD game
-      </h3>
+      <div
+        class="_textContainer_0a39a7"
+      >
+        <h3>
+          COD game
+        </h3>
+        <div>
+          <p>
+            Price: 50.00$
+          </p>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
     </div>
     <div
       class="_card_0a39a7"
@@ -55,9 +79,21 @@ exports[`Category component > should render correct elements 1`] = `
           alt="Minecraft game game poster"
         />
       </div>
-      <h3>
-        Minecraft game
-      </h3>
+      <div
+        class="_textContainer_0a39a7"
+      >
+        <h3>
+          Minecraft game
+        </h3>
+        <div>
+          <p>
+            Price: 50.00$
+          </p>
+          <button>
+            Add to cart
+          </button>
+        </div>
+      </div>
     </div>
     ;
   </section>
