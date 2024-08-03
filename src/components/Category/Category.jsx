@@ -3,6 +3,7 @@ import getData from "../../utils/fetchData";
 import styles from "./Category.module.css";
 import { Suspense } from "react";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import generatePrice from "../../utils/generatePrice";
 
 function Category() {
   const { data: games } = useLoaderData();
@@ -14,6 +15,7 @@ function Category() {
           return (
             <section className={styles.section}>
               {games.games.map((game) => {
+                game.price = generatePrice();
                 return (
                   <div key={game.title} className={styles.card}>
                     <div className={styles.imageContainer}>
@@ -30,7 +32,13 @@ function Category() {
                         alt={`${game.title} game poster`}
                       />
                     </div>
-                    <h3>{game.title}</h3>
+                    <div className={styles.textContainer}>
+                      <h3>{game.title}</h3>
+                      <div>
+                        <p>{`Price: ${game.price}$`}</p>
+                        <button>Add to cart</button>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
