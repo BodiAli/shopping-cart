@@ -99,3 +99,5 @@ exports[`Category component > should render correct elements 1`] = `
   </section>
 </div>
 `;
+
+exports[`Category component > should render correct elements 2`] = `<div />`;

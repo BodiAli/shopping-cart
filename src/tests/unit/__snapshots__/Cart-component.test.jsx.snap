@@ -1,0 +1,113 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Cart Component > should render correct elements 1`] = `
+<div>
+  <section
+    class="_cart_daa79f "
+  >
+    <button>
+      X
+    </button>
+    <div
+      class="_container_daa79f"
+    >
+      <div
+        class="_card_daa79f"
+      >
+        <div
+          class="_imageContainer_daa79f"
+        >
+          <img
+            alt="Fifa game product poster"
+            src=""
+          />
+        </div>
+        <div
+          class="_textContainer_daa79f"
+        >
+          <h3>
+            Fifa game
+          </h3>
+          <div
+            class="_priceContainer_daa79f"
+          >
+            <p>
+              Price: 50.50$
+            </p>
+            <input
+              class="_quantityInput_daa79f"
+              name="quantity"
+              type="number"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="_card_daa79f"
+      >
+        <div
+          class="_imageContainer_daa79f"
+        >
+          <img
+            alt="COD game product poster"
+            src=""
+          />
+        </div>
+        <div
+          class="_textContainer_daa79f"
+        >
+          <h3>
+            COD game
+          </h3>
+          <div
+            class="_priceContainer_daa79f"
+          >
+            <p>
+              Price: 50.50$
+            </p>
+            <input
+              class="_quantityInput_daa79f"
+              name="quantity"
+              type="number"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="_card_daa79f"
+      >
+        <div
+          class="_imageContainer_daa79f"
+        >
+          <img
+            alt="Minecraft game product poster"
+            src=""
+          />
+        </div>
+        <div
+          class="_textContainer_daa79f"
+        >
+          <h3>
+            Minecraft game
+          </h3>
+          <div
+            class="_priceContainer_daa79f"
+          >
+            <p>
+              Price: 50.50$
+            </p>
+            <input
+              class="_quantityInput_daa79f"
+              name="quantity"
+              type="number"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -8,6 +8,19 @@ exports[`Shop page > should render correct elements 1`] = `
     <aside
       class="_aside_c02aaf"
     >
+      <div
+        class="_viewCart_c02aaf"
+      >
+        <h2>
+          View Cart
+        </h2>
+        <div
+          class="_count_c02aaf"
+          data-testid="quantity"
+        >
+          1
+        </div>
+      </div>
       <h2>
         Games
       </h2>
@@ -120,6 +133,9 @@ exports[`Shop page > should render correct elements 1`] = `
         </a>
       </ul>
     </aside>
+    <p>
+      Call of Duty
+    </p>
   </main>
 </div>
 `;
