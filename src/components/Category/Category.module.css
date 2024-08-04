@@ -3,8 +3,9 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 1rem;
-  max-height: calc(100vh - 83px);
+  max-height: calc(100vh - 88px);
   overflow-y: scroll;
+  scrollbar-color: var(--primary) var(--gray);
 }
 
 .card {
