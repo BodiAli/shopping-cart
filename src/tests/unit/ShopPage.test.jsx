@@ -1,6 +1,26 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
+import { vi } from "vitest";
 import ShopPage from "../../pages/ShopPage/ShopPage";
+import Cart from "../../utils/cart";
+
+const cart = new Cart([{ title: "Call of Duty" }]);
+
+// Mocking useOutletContext to return an array because it returns null and causes an error
+vi.mock("react-router-dom", async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    useOutletContext: vi.fn(() => [cart]),
+  };
+});
+
+// Test if it renders the CartComponent with cart object
+vi.mock("../../components/CartComponent/CartComponent", () => {
+  return {
+    default: vi.fn(({ cart }) => <p>{cart.products[0].title}</p>),
+  };
+});
 
 const router = createMemoryRouter([
   {
@@ -80,5 +100,20 @@ describe("Shop page", () => {
     expect(simulationNav).toHaveAttribute("href", "/simulation");
     expect(puzzleNav).toHaveAttribute("href", "/puzzle");
     expect(strategyNav).toHaveAttribute("href", "/strategy");
+  });
+
+  test("should render an element to view cart", () => {
+    render(<ShopPage />, { wrapper });
+    expect(screen.getByRole("heading", { name: /view cart/i })).toBeInTheDocument();
+  });
+
+  test("should render number of cart items in the cart", async () => {
+    render(<ShopPage />, { wrapper });
+    expect(screen.getByTestId("quantity")).toHaveTextContent(1);
+    await waitFor(() => {
+      cart.addProduct({ title: "Fifa" });
+      cart.addProduct({ title: "Minecraft" });
+      expect(screen.getByTestId("quantity")).toHaveTextContent(3);
+    });
   });
 });
