@@ -1,12 +1,20 @@
-import { Await, defer, useLoaderData } from "react-router-dom";
+import { Suspense } from "react";
+import { Await, defer, useLoaderData, useOutletContext } from "react-router-dom";
 import getData from "../../utils/fetchData";
 import styles from "./Category.module.css";
-import { Suspense } from "react";
+import Cart from "../../utils/cart";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import generatePrice from "../../utils/generatePrice";
 
 function Category() {
   const { data: games } = useLoaderData();
+  const [cart, setCart] = useOutletContext();
+
+  function handleButtonClick(game) {
+    const newCart = new Cart(cart.products);
+    newCart.addProduct(game);
+    setCart(newCart);
+  }
 
   return (
     <Suspense fallback={<LoadingSpinner />}>
@@ -15,7 +23,10 @@ function Category() {
           return (
             <section className={styles.section}>
               {games.games.map((game) => {
-                game.price = generatePrice();
+                const price = generatePrice();
+                game.price = price;
+                game.originalPrice = price;
+                game.quantity = 1;
                 return (
                   <div key={game.title} className={styles.card}>
                     <div className={styles.imageContainer}>
@@ -35,8 +46,8 @@ function Category() {
                     <div className={styles.textContainer}>
                       <h3>{game.title}</h3>
                       <div>
-                        <p>{`Price: ${game.price}$`}</p>
-                        <button>Add to cart</button>
+                        <p>{`Price: ${game.originalPrice}$`}</p>
+                        <button onClick={() => handleButtonClick(game)}>Add to cart</button>
                       </div>
                     </div>
                   </div>
