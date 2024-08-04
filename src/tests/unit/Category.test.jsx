@@ -41,12 +41,20 @@ Category.loader = vi.fn(({ params }) => {
   switch (params.category) {
     case "games":
       return { data: MOCK_GAMES };
-
     case "action":
       return { data: MOCK_ACTION };
     default:
       throw new Error("Data not found");
   }
+});
+
+// Mocking useOutletContext to return an array because it returns null and causes an error
+vi.mock("react-router-dom", async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    useOutletContext: vi.fn(() => []),
+  };
 });
 
 vi.mock("../../utils/generatePrice", () => {
