@@ -7,9 +7,11 @@
 .aside {
   background-color: var(--gray);
   border-radius: 5px;
-  max-height: calc(100vh - 83px);
+  max-height: calc(100vh - 88px);
   overflow-y: auto;
   padding: 1.5rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--gray);
 }
 
 .aside > h2 {
@@ -41,7 +43,6 @@
 
 .navigation :global(a.active) {
   background-color: var(--darkerGreen);
-  border: 1px solid black;
 }
 
 .navigation a:hover {
