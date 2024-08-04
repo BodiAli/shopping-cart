@@ -39,6 +39,11 @@
   background-color: var(--darkerGray);
 }
 
+.navigation :global(a.active) {
+  background-color: var(--darkerGreen);
+  border: 1px solid black;
+}
+
 .navigation a:hover {
   filter: brightness(1.1);
 }

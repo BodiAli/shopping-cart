@@ -33,3 +33,12 @@
   background-color: var(--darkerGray);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.775);
 }
+
+.navContainer > :global(a.active) {
+  background-color: var(--darkerGreen);
+  border: 1px solid black;
+}
+
+.navContainer > a:hover {
+  filter: brightness(1.1);
+}
