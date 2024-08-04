@@ -33,7 +33,11 @@ function HomePage() {
         className={styles.carousel}
       >
         {data.map((item, index) => {
-          item.price = generatePrice();
+          const price = generatePrice();
+          item.price = price;
+          item.originalPrice = price;
+          item.quantity = 1;
+
           return (
             <SplideSlide key={index}>
               <div className={styles.card}>
@@ -46,7 +50,7 @@ function HomePage() {
                 </div>
                 <div className={styles.descriptionContainer}>
                   <h3>{item.title}</h3>
-                  <p className={styles.price}>{`Price: ${item.price}$`}</p>
+                  <p className={styles.price}>{`Price: ${item.originalPrice}$`}</p>
                   <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
                 </div>
               </div>
