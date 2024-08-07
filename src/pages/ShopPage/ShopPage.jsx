@@ -70,7 +70,7 @@ function ShopPage() {
             View Cart
           </h2>
           <div data-testid="quantity" className={styles.count}>
-            {cart.products.length}
+            {cart.count}
           </div>
         </div>
         <h2>
