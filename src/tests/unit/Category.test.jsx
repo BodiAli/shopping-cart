@@ -3,6 +3,10 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { vi } from "vitest";
 import Category from "../../components/Category/Category";
 import ErrorComponent from "../../components/ErrorComponent/ErrorComponent";
+import Cart from "../../utils/cart";
+import userEvent from "@testing-library/user-event";
+
+const cart = new Cart();
 
 const MOCK_GAMES = {
   games: [
@@ -48,12 +52,22 @@ Category.loader = vi.fn(({ params }) => {
   }
 });
 
+const handleButtonClick = vi.fn((product) => {
+  if (cart.isTheProductPresent(product)) {
+    cart.removeProduct(product);
+  } else {
+    cart.addProduct(product);
+  }
+});
+
 // Mocking useOutletContext to return an array because it returns null and causes an error
 vi.mock("react-router-dom", async (importOriginal) => {
   const actual = await importOriginal();
   return {
     ...actual,
-    useOutletContext: vi.fn(() => []),
+    useOutletContext: vi.fn(() => {
+      return { arr: [cart], handleButtonClick };
+    }),
   };
 });
 
@@ -131,5 +145,27 @@ describe("Category component", () => {
   test("should display an error message when category is not found", () => {
     render(<Category />, { wrapper: wrapper3 });
     expect(screen.getByText(/data not found/i)).toBeInTheDocument();
+  });
+
+  test("should render button to mutate cart", () => {
+    render(<Category />, { wrapper });
+    const addToCartButtons = screen.getAllByRole("button", { name: /add to cart/i });
+
+    addToCartButtons.forEach((button) => {
+      expect(button).toBeInTheDocument();
+    });
+  });
+
+  test("should remove from cart after button click", async () => {
+    const user = userEvent.setup();
+    render(<Category />, { wrapper });
+
+    const fifa = MOCK_GAMES.games[0];
+    const addToCartButton = screen.getAllByRole("button", { name: /add to cart/i })[0];
+
+    expect(cart.isTheProductPresent(fifa)).toBeFalsy();
+
+    await user.click(addToCartButton);
+    expect(cart.isTheProductPresent(fifa)).toBeTruthy();
   });
 });
