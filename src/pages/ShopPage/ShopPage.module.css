@@ -35,6 +35,9 @@
 }
 
 .navigation a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: var(--navText);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.775);
   text-decoration: none;
@@ -74,10 +77,17 @@
 .viewCart > h2 {
   font-size: 1.1rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .count {
   background-color: white;
-  border-radius: 100%;
+  border-radius: 50%;
   padding: 2px 5px;
+  width: 2ch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
