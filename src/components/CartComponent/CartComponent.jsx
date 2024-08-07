@@ -40,7 +40,7 @@ function CartComponent({ cart, isActive, handleCartVisibility, handleInputChange
   }
 
   return (
-    <section className={`${styles.cart} ${isActive ? styles.isActive : ""}`}>
+    <section data-testid={"cart"} className={`${styles.cart} ${isActive ? styles.isActive : ""}`}>
       <button className={styles.closeButton} onClick={handleCartVisibility}>
         X
       </button>
@@ -54,8 +54,8 @@ function CartComponent({ cart, isActive, handleCartVisibility, handleInputChange
 
 CartComponent.propTypes = {
   cart: PropTypes.instanceOf(Cart).isRequired,
-  isActive: PropTypes.bool.isRequired,
-  handleCartVisibility: PropTypes.func.isRequired,
+  isActive: PropTypes.bool,
+  handleCartVisibility: PropTypes.func,
   handleInputChange: PropTypes.func.isRequired,
   handleProductRemove: PropTypes.func.isRequired,
 };
