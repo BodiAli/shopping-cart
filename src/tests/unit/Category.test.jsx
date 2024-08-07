@@ -166,6 +166,18 @@ describe("Category component", () => {
     expect(cart.isTheProductPresent(fifa)).toBeFalsy();
 
     await user.click(addToCartButton);
+
     expect(cart.isTheProductPresent(fifa)).toBeTruthy();
+  });
+
+  test("should render button text to 'Remove from Cart' if the product is present", async () => {
+    const fifa = MOCK_GAMES.games[0];
+    cart.addProduct(fifa);
+
+    render(<Category />, { wrapper });
+
+    const button = screen.getByRole("button", { name: /remove from cart/i });
+
+    expect(button).toBeInTheDocument();
   });
 });
