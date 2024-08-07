@@ -21,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 100px;
+  gap: 80px;
 }
 
 .navContainer > a {
@@ -34,7 +34,7 @@
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.775);
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 5px;
 }
 
 .navContainer > :global(a.active) {
