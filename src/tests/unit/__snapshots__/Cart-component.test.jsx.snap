@@ -4,8 +4,11 @@ exports[`Cart Component > should render correct elements 1`] = `
 <div>
   <section
     class="_cart_daa79f "
+    data-testid="cart"
   >
-    <button>
+    <button
+      class="_closeButton_daa79f"
+    >
       X
     </button>
     <div
@@ -29,17 +32,26 @@ exports[`Cart Component > should render correct elements 1`] = `
             Fifa game
           </h3>
           <div
-            class="_priceContainer_daa79f"
+            class="_cartInfoContainer_daa79f"
           >
-            <p>
-              Price: 50.50$
-            </p>
-            <input
-              class="_quantityInput_daa79f"
-              name="quantity"
-              type="number"
-              value=""
-            />
+            <div
+              class="_priceContainer_daa79f"
+            >
+              <p>
+                Price: 50.50$
+              </p>
+              <input
+                class="_quantityInput_daa79f"
+                name="quantity"
+                type="number"
+                value="1"
+              />
+            </div>
+            <button
+              class="_remove_daa79f"
+            >
+              Remove
+            </button>
           </div>
         </div>
       </div>
@@ -61,17 +73,26 @@ exports[`Cart Component > should render correct elements 1`] = `
             COD game
           </h3>
           <div
-            class="_priceContainer_daa79f"
+            class="_cartInfoContainer_daa79f"
           >
-            <p>
-              Price: 50.50$
-            </p>
-            <input
-              class="_quantityInput_daa79f"
-              name="quantity"
-              type="number"
-              value=""
-            />
+            <div
+              class="_priceContainer_daa79f"
+            >
+              <p>
+                Price: 50.50$
+              </p>
+              <input
+                class="_quantityInput_daa79f"
+                name="quantity"
+                type="number"
+                value="1"
+              />
+            </div>
+            <button
+              class="_remove_daa79f"
+            >
+              Remove
+            </button>
           </div>
         </div>
       </div>
@@ -93,20 +114,34 @@ exports[`Cart Component > should render correct elements 1`] = `
             Minecraft game
           </h3>
           <div
-            class="_priceContainer_daa79f"
+            class="_cartInfoContainer_daa79f"
           >
-            <p>
-              Price: 50.50$
-            </p>
-            <input
-              class="_quantityInput_daa79f"
-              name="quantity"
-              type="number"
-              value=""
-            />
+            <div
+              class="_priceContainer_daa79f"
+            >
+              <p>
+                Price: 50.50$
+              </p>
+              <input
+                class="_quantityInput_daa79f"
+                name="quantity"
+                type="number"
+                value="1"
+              />
+            </div>
+            <button
+              class="_remove_daa79f"
+            >
+              Remove
+            </button>
           </div>
         </div>
       </div>
+      <button
+        class="_checkout_daa79f"
+      >
+        Checkout
+      </button>
     </div>
   </section>
 </div>
