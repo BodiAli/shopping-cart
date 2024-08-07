@@ -38,4 +38,15 @@ describe("Cart Class", () => {
     cart.addProduct(product3);
     expect(cart.count).toBe(3);
   });
+
+  test("should have a method to check if a product is in the products array", () => {
+    const cart = new Cart();
+    const product1 = { title: "shirt" };
+    const product2 = { title: "pants" };
+
+    cart.addProduct(product1);
+
+    expect(cart.isTheProductPresent(product1)).toBeTruthy();
+    expect(cart.isTheProductPresent(product2)).toBeFalsy();
+  });
 });
