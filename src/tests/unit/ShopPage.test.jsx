@@ -20,7 +20,7 @@ vi.mock("react-router-dom", async (importOriginal) => {
 // Test if it renders the CartComponent with cart object
 vi.mock("../../components/CartComponent/CartComponent", () => {
   return {
-    default: vi.fn(({ cart }) => <p>{cart.products[0].title}</p>),
+    default: vi.fn(({ cart }) => <h3>{cart.products[0].title}</h3>),
   };
 });
 
@@ -119,5 +119,10 @@ describe("Shop page", () => {
 
     render(<ShopPage />, { wrapper });
     expect(screen.getByTestId("quantity")).toHaveTextContent(3);
+  });
+
+  test("should render CartComponent with the number of items in cart", () => {
+    render(<ShopPage />, { wrapper });
+    expect(screen.getByRole("heading", { name: /call of duty/i, level: 3 })).toBeInTheDocument();
   });
 });
