@@ -4,10 +4,16 @@ import CartComponent from "../../components/CartComponent/CartComponent";
 import Cart from "../../utils/cart";
 import styles from "./ShopPage.module.css";
 
+// Icons
+import { SiWindows11 } from "react-icons/si";
+import { CgGames } from "react-icons/cg";
+import { MdLaptopMac } from "react-icons/md";
+import { IoCartOutline } from "react-icons/io5";
+
 function ShopPage() {
   const [isActive, setIsActive] = useState(false);
-  const [cart, setCart] = useOutletContext();
-
+  const { arr, handleButtonClick } = useOutletContext();
+  const [cart, setCart] = arr;
   function handleViewCart() {
     setIsActive(!isActive);
   }
@@ -39,21 +45,33 @@ function ShopPage() {
     <main className={styles.main}>
       <aside className={styles.aside}>
         <div onClick={handleViewCart} className={styles.viewCart}>
-          <h2>View Cart</h2>
+          <h2>
+            <IoCartOutline size={"1.5rem"} />
+            View Cart
+          </h2>
           <div data-testid="quantity" className={styles.count}>
             {cart.products.length}
           </div>
         </div>
         <h2>Games</h2>
         <ul className={styles.navigation}>
-          <NavLink to="games">Games</NavLink>
+          <NavLink to="games">
+            <CgGames size={"1.2rem"} />
+            Games
+          </NavLink>
         </ul>
 
         <h2>Platforms</h2>
         <ul className={styles.navigation}>
-          <NavLink to="windows">Windows</NavLink>
+          <NavLink to="windows">
+            <SiWindows11 width={1} />
+            Windows
+          </NavLink>
 
-          <NavLink to="mac">Mac</NavLink>
+          <NavLink to="mac">
+            <MdLaptopMac size={"1.2rem"} />
+            Mac
+          </NavLink>
 
           <NavLink to="linux">Linux</NavLink>
 
@@ -88,7 +106,7 @@ function ShopPage() {
         handleInputChange={handleInputChange}
         isActive={isActive}
       />
-      <Outlet context={[cart, setCart]} />
+      <Outlet context={{ arr, handleButtonClick }} />
     </main>
   );
 }
