@@ -141,6 +141,14 @@ exports[`Cart Component > should render correct elements 1`] = `
         class="_checkout_daa79f"
       >
         Checkout
+        <br />
+        <span
+          class="_total_daa79f"
+        >
+          Total: 
+          151.50
+          $
+        </span>
       </button>
     </div>
   </section>

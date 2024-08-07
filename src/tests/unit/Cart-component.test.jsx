@@ -110,4 +110,16 @@ describe("Cart Component", () => {
     const checkoutButton = screen.getByRole("button", { name: /checkout/i });
     expect(checkoutButton).toBeInTheDocument();
   });
+
+  test("should have the total price of all products", () => {
+    render(
+      <CartComponent
+        cart={cart}
+        handleInputChange={handleInputChange}
+        handleProductRemove={handleProductRemove}
+      />
+    );
+    const totalPrice = screen.getByText(/total: 151.50/i);
+    expect(totalPrice).toBeInTheDocument();
+  });
 });
