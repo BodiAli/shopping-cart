@@ -5,6 +5,9 @@ import styles from "./Category.module.css";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import generatePrice from "../../utils/generatePrice";
 
+// Icons
+import { IoMdAdd, IoMdRemove } from "react-icons/io";
+
 function Category() {
   const { data: games } = useLoaderData();
   const { arr, handleButtonClick } = useOutletContext();
@@ -42,7 +45,15 @@ function Category() {
                       <div>
                         <p>{`Price: ${game.originalPrice}$`}</p>
                         <button onClick={() => handleButtonClick(game)}>
-                          {cart.isTheProductPresent(game) ? "Remove from Cart" : "Add to Cart"}
+                          {cart.isTheProductPresent(game) ? (
+                            <>
+                              <IoMdRemove color="#c00000" /> Remove from Cart
+                            </>
+                          ) : (
+                            <>
+                              <IoMdAdd color="#01f5b8" /> Add to Cart
+                            </>
+                          )}
                         </button>
                       </div>
                     </div>
