@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { vi } from "vitest";
 import ShopPage from "../../pages/ShopPage/ShopPage";
@@ -11,7 +11,9 @@ vi.mock("react-router-dom", async (importOriginal) => {
   const actual = await importOriginal();
   return {
     ...actual,
-    useOutletContext: vi.fn(() => [cart]),
+    useOutletContext: vi.fn(() => {
+      return { arr: [cart] };
+    }),
   };
 });
 
@@ -108,12 +110,14 @@ describe("Shop page", () => {
   });
 
   test("should render number of cart items in the cart", async () => {
-    render(<ShopPage />, { wrapper });
+    const { unmount } = render(<ShopPage />, { wrapper });
     expect(screen.getByTestId("quantity")).toHaveTextContent(1);
-    await waitFor(() => {
-      cart.addProduct({ title: "Fifa" });
-      cart.addProduct({ title: "Minecraft" });
-      expect(screen.getByTestId("quantity")).toHaveTextContent(3);
-    });
+
+    unmount();
+    cart.addProduct({ title: "Fifa" });
+    cart.addProduct({ title: "Minecraft" });
+
+    render(<ShopPage />, { wrapper });
+    expect(screen.getByTestId("quantity")).toHaveTextContent(3);
   });
 });
