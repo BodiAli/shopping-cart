@@ -6,7 +6,7 @@ describe("Cart Class", () => {
     expect(Array.isArray(cart.products)).toBeTruthy();
   });
 
-  test("cart should have a method to push products in the array", () => {
+  test("addProduct should push products to the array", () => {
     const cart = new Cart();
     const product = { title: "shirt", price: 300 };
     cart.addProduct(product);
@@ -14,7 +14,7 @@ describe("Cart Class", () => {
     expect(cart.products.length).toBe(1);
   });
 
-  test("cart should have a method to remove products in the array", () => {
+  test("removeProduct should remove products in the array", () => {
     const cart = new Cart();
     const product1 = { title: "shirt", price: 300 };
     const product2 = { title: "pants", price: 200 };
@@ -39,7 +39,7 @@ describe("Cart Class", () => {
     expect(cart.count).toBe(3);
   });
 
-  test("should have a method to check if a product is in the products array", () => {
+  test("isTheProductPresent should check if a product is in the products array", () => {
     const cart = new Cart();
     const product1 = { title: "shirt" };
     const product2 = { title: "pants" };
@@ -48,5 +48,17 @@ describe("Cart Class", () => {
 
     expect(cart.isTheProductPresent(product1)).toBeTruthy();
     expect(cart.isTheProductPresent(product2)).toBeFalsy();
+  });
+
+  test("getAllPrices should get the prices of all products", () => {
+    const cart = new Cart();
+    const product1 = { title: "shirt", price: "20.90" };
+    const product2 = { title: "pants", price: "15.22" };
+    const product3 = { title: "hoodie", price: "332.23" };
+    cart.addProduct(product1);
+    cart.addProduct(product2);
+    cart.addProduct(product3);
+
+    expect(cart.getAllPrices()).toBe("368.35");
   });
 });
