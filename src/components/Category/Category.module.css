@@ -3,7 +3,7 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 1rem;
-  max-height: calc(100vh - 88px);
+  max-height: calc(100vh - 85px);
   overflow-y: scroll;
   scrollbar-color: var(--primary) var(--gray);
   position: relative;
@@ -84,6 +84,9 @@
   padding: 0.4rem 0.8rem;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 .textContainer button:hover {
