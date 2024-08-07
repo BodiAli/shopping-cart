@@ -12,6 +12,10 @@ class Cart {
     this.products.splice(index, 1);
   }
 
+  isTheProductPresent(product) {
+    return this.products.includes(product);
+  }
+
   get count() {
     return this.products.length;
   }
