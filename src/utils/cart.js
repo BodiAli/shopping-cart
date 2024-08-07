@@ -16,6 +16,16 @@ class Cart {
     return this.products.includes(product);
   }
 
+  getAllPrices() {
+    if (this.count !== 0) {
+      return this.products
+        .reduce((prevVal, currentVal) => {
+          return prevVal + parseFloat(currentVal.price);
+        }, 0)
+        .toFixed(2);
+    }
+  }
+
   get count() {
     return this.products.length;
   }
