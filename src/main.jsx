@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage/HomePage.jsx";
 import ShopPage from "./pages/ShopPage/ShopPage.jsx";
 import Category from "./components/Category/Category.jsx";
 import "./reset.css";
-//TODO: Fix ShopPage test
+
 //TODO: Implement cart checkout button
 //TODO: Implement product page
 
