@@ -1,9 +1,12 @@
 import { Suspense } from "react";
 import { Await, defer, useLoaderData, useOutletContext } from "react-router-dom";
 import getData from "../../utils/fetchData";
-import styles from "./Category.module.css";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import generatePrice from "../../utils/generatePrice";
+import styles from "./Category.module.css";
+
+// Image
+import noImage from "../../assets/no-image.svg";
 
 // Icons
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
@@ -31,12 +34,12 @@ function Category() {
                         className={styles.backGround}
                         style={{
                           backgroundImage: `url(${
-                            game.sample_cover ? game.sample_cover.thumbnail_image : ""
+                            game.sample_cover ? game.sample_cover.thumbnail_image : noImage
                           })`,
                         }}
                       ></div>
                       <img
-                        src={game.sample_cover ? game.sample_cover.thumbnail_image : ""}
+                        src={game.sample_cover ? game.sample_cover.thumbnail_image : noImage}
                         alt={`${game.title} game poster`}
                       />
                     </div>
