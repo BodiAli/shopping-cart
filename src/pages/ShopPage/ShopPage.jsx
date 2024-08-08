@@ -61,6 +61,12 @@ function ShopPage() {
     }
   }
 
+  function removeProducts() {
+    const newCart = new Cart([]);
+    setCart(newCart);
+    setIsActive(false);
+  }
+
   return (
     <main className={styles.main}>
       <aside className={styles.aside}>
@@ -171,6 +177,7 @@ function ShopPage() {
         handleInputChange={handleInputChange}
         isActive={isActive}
         handleProductRemove={handleProductRemove}
+        removeProducts={removeProducts}
       />
       <Outlet context={{ arr, handleButtonClick }} />
     </main>
