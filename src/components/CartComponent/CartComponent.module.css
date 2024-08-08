@@ -128,6 +128,8 @@
   font-weight: 600;
   margin-top: 25px;
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
 }
 
 .checkout:hover {
@@ -141,4 +143,41 @@
 .total {
   font-size: 1rem;
   color: var(--gray);
+}
+
+.checkoutAnimation {
+  animation: scale-out 700ms ease 1 forwards;
+}
+
+@keyframes scale-out {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
+
+.tick {
+  transform: translateX(-150%);
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.tickAnimation {
+  animation: move-in 500ms ease-out 1 forwards, shake 500ms ease 1;
+}
+
+@keyframes move-in {
+  from {
+    transform: translateX(-150%);
+  }
+  80% {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
