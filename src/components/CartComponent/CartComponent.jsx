@@ -1,8 +1,23 @@
 import PropTypes from "prop-types";
 import Cart from "../../utils/cart";
 import styles from "./CartComponent.module.css";
+import { useState } from "react";
 
-function CartComponent({ cart, isActive, handleCartVisibility, handleInputChange, handleProductRemove }) {
+function CartComponent({
+  cart,
+  isActive,
+  handleCartVisibility,
+  handleInputChange,
+  handleProductRemove,
+  removeProducts,
+}) {
+  const [checkoutAnimation, setCheckoutAnimation] = useState(false);
+  const [tickAnimation, setTickAnimation] = useState(false);
+
+  function handleClick() {
+    setCheckoutAnimation(true);
+  }
+
   let content;
   if (cart.products.length === 0) {
     content = <p className={styles.empty}>Cart is empty!</p>;
@@ -40,9 +55,30 @@ function CartComponent({ cart, isActive, handleCartVisibility, handleInputChange
           );
         })}
         <button className={styles.checkout}>
-          Checkout
-          <br />
-          <span className={styles.total}>Total: {cart.getAllPrices()}$</span>
+          <p
+            className={checkoutAnimation ? styles.checkoutAnimation : ""}
+            onClick={handleClick}
+            onAnimationEnd={() => {
+              setTickAnimation(true);
+            }}
+          >
+            Checkout
+            <br />
+            <span className={styles.total}>Total: {cart.getAllPrices()}$</span>
+          </p>
+
+          <p
+            className={`${styles.tick} ${tickAnimation ? styles.tickAnimation : ""}`}
+            onAnimationEnd={() => {
+              setTimeout(() => {
+                setCheckoutAnimation(false);
+                setTickAnimation(false);
+                removeProducts();
+              }, 2000);
+            }}
+          >
+            Done!
+          </p>
         </button>
       </>
     );
@@ -64,6 +100,7 @@ CartComponent.propTypes = {
   handleCartVisibility: PropTypes.func,
   handleInputChange: PropTypes.func.isRequired,
   handleProductRemove: PropTypes.func.isRequired,
+  removeProducts: PropTypes.func,
 };
 
 export default CartComponent;
