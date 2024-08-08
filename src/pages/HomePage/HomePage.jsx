@@ -1,13 +1,15 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useNavigate, useLoaderData } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import getData from "../../utils/fetchData";
 import generatePrice from "../../utils/generatePrice";
 import "@splidejs/react-splide/css/sea-green";
 import styles from "./HomePage.module.css";
 
+// Image
+import noImage from "../../assets/no-image.svg";
+
 function HomePage() {
   const data = useLoaderData();
-
   return (
     <main className={styles.main}>
       <div className={styles.headerContainer}>
@@ -44,9 +46,16 @@ function HomePage() {
                 <div className={styles.imageContainer}>
                   <div
                     className={styles.backGround}
-                    style={{ backgroundImage: `url(${item.sample_cover.thumbnail_image})` }}
+                    style={{
+                      backgroundImage: `url(${
+                        item.sample_cover ? item.sample_cover.thumbnail_image : noImage
+                      })`,
+                    }}
                   ></div>
-                  <img src={item.sample_cover.thumbnail_image} alt={`${item.title} game poster`} />
+                  <img
+                    src={item.sample_cover ? item.sample_cover.thumbnail_image : noImage}
+                    alt={`${item.title} game poster`}
+                  />
                 </div>
                 <div className={styles.descriptionContainer}>
                   <h3>{item.title}</h3>
