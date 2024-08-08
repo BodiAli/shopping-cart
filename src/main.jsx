@@ -9,7 +9,6 @@ import ShopPage from "./pages/ShopPage/ShopPage.jsx";
 import Category from "./components/Category/Category.jsx";
 import "./reset.css";
 
-//TODO: Implement cart checkout button
 //TODO: Implement product page
 
 const router = createBrowserRouter([
