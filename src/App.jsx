@@ -8,7 +8,8 @@ import "./App.css";
 function App() {
   const [cart, setCart] = useState(new Cart([]));
   const navigation = useNavigation();
-  function handleButtonClick(game) {
+  function handleButtonClick(e, game) {
+    e.stopPropagation();
     const newCart = new Cart(cart.products);
     if (newCart.isTheProductPresent(game)) {
       newCart.removeProduct(game);
