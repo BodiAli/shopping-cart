@@ -10,6 +10,12 @@ import noImage from "../../assets/no-image.svg";
 
 function HomePage() {
   const data = useLoaderData();
+  const navigate = useNavigate();
+
+  function navigateToProduct(gameId) {
+    navigate(`product/${gameId}`);
+  }
+
   return (
     <main className={styles.main}>
       <div className={styles.headerContainer}>
@@ -42,7 +48,7 @@ function HomePage() {
 
           return (
             <SplideSlide key={index}>
-              <div className={styles.card}>
+              <div onClick={() => navigateToProduct(item.game_id)} className={styles.card}>
                 <div className={styles.imageContainer}>
                   <div
                     className={styles.backGround}
