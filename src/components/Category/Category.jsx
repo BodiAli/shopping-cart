@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Await, defer, useLoaderData, useOutletContext } from "react-router-dom";
+import { Await, defer, useLoaderData, useOutletContext, useNavigate } from "react-router-dom";
 import getData from "../../utils/fetchData";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import generatePrice from "../../utils/generatePrice";
@@ -13,8 +13,13 @@ import { IoMdAdd, IoMdRemove } from "react-icons/io";
 
 function Category() {
   const { data: games } = useLoaderData();
+  const navigate = useNavigate();
   const { arr, handleButtonClick } = useOutletContext();
   const [cart] = arr;
+
+  function navigateToProduct(gameId) {
+    navigate(`/product/${gameId}`);
+  }
 
   return (
     <Suspense fallback={<LoadingSpinner />}>
@@ -28,7 +33,11 @@ function Category() {
                 game.originalPrice = price;
                 game.quantity = 1;
                 return (
-                  <div key={game.title} className={styles.card}>
+                  <div
+                    onClick={() => navigateToProduct(game.game_id)}
+                    key={game.title}
+                    className={styles.card}
+                  >
                     <div className={styles.imageContainer}>
                       <div
                         className={styles.backGround}
@@ -47,7 +56,7 @@ function Category() {
                       <h3>{game.title}</h3>
                       <div>
                         <p>{`Price: ${game.originalPrice}$`}</p>
-                        <button onClick={() => handleButtonClick(game)}>
+                        <button onClick={(e) => handleButtonClick(e, game)}>
                           {cart.isTheProductPresent(game) ? (
                             <>
                               <IoMdRemove color="#c00000" /> Remove from Cart
