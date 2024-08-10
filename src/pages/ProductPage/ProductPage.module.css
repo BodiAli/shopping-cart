@@ -32,5 +32,49 @@
 }
 
 .gameInfo {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr;
   border: 3px solid black;
+}
+
+.gameInfo > .infoImgContainer {
+}
+
+.gameInfo > .container {
+}
+
+.gameInfo > .descriptionContainer {
+  grid-column: 1 / 3;
+  height: fit-content;
+}
+
+.alternateTitles {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.alternateTitles > ul {
+  padding-inline-start: 40px;
+  list-style-type: circle;
+}
+
+.genres {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.genres > ul {
+  padding-inline-start: 40px;
+  list-style-type: circle;
+}
+
+.platforms {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.platforms > ul {
+  padding-inline-start: 40px;
+  list-style-type: circle;
 }
