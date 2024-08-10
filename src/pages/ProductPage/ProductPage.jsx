@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import getData from "../../utils/fetchData";
@@ -19,6 +20,7 @@ function ProductPage() {
           drag: true,
           autoplay: true,
           interval: 5000,
+          arrows: false,
         }}
         className={styles.carousel}
       >
@@ -48,6 +50,67 @@ function ProductPage() {
             alt={`${game.title} game poster`}
           />
         </div>
+        <div className={styles.container}>
+          <div className={styles.titlesContainer}>
+            <div className={styles.titleContainer}>
+              <p>Title:</p>
+              <p className={styles.title}>{game.title}</p>
+            </div>
+            <div className={styles.alternateTitlesContainer}>
+              <p>Alternate Titles:</p>
+              <ul className={styles.alternateTitles}>
+                {game.alternate_titles.length === 0 ? (
+                  <li>No alternate titles</li>
+                ) : (
+                  game.alternate_titles.map((title, index) => {
+                    return (
+                      <Fragment key={index}>
+                        <li>{title.title}</li>
+                        <ul>
+                          <li>{title.description}</li>
+                        </ul>
+                      </Fragment>
+                    );
+                  })
+                )}
+              </ul>
+            </div>
+          </div>
+          <div className={styles.genresContainer}>
+            <p>Genres:</p>
+            <ul className={styles.genres}>
+              {game.genres.map((genre, index) => {
+                return (
+                  <Fragment key={index}>
+                    <li>{genre.genre_category}</li>
+                    <ul>
+                      <li>{genre.genre_name}</li>
+                    </ul>
+                  </Fragment>
+                );
+              })}
+            </ul>
+          </div>
+          <div className={styles.platformsContainer}>
+            <p>Platforms:</p>
+            <ul className={styles.platforms}>
+              {game.platforms.map((platform, index) => {
+                return (
+                  <Fragment key={index}>
+                    <li>{platform.platform_name}</li>
+                    <ul>
+                      <li>Release date: {platform.first_release_date}</li>
+                    </ul>
+                  </Fragment>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+        <div
+          className={styles.descriptionContainer}
+          dangerouslySetInnerHTML={{ __html: game.description }}
+        ></div>
       </section>
     </main>
   );
