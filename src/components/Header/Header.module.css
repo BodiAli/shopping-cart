@@ -13,8 +13,8 @@
   background-image: url(/green-bg-text.jpg);
   background-clip: text;
   background-position: center;
-  filter: brightness(1.8);
   color: transparent;
+  filter: brightness(1.8);
 }
 
 .navContainer {
