@@ -33,48 +33,166 @@
 
 .gameInfo {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 1fr;
-  border: 3px solid black;
+  grid-template-columns: 1fr 4fr;
+  box-shadow: 2.8px 2.8px 10px rgba(0, 0, 0, 0.775);
 }
 
-.gameInfo > .infoImgContainer {
+.infoImgContainer {
+  background-color: var(--primary);
+  display: flex;
+}
+
+.infoImgContainer > img {
+  align-self: center;
 }
 
 .gameInfo > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0.5rem;
+  background-color: var(--gray);
+}
+
+.buttonContainer {
+  margin-top: 20px;
+  align-self: center;
+}
+
+.buttonContainer > button {
+  font-family: "Merriweather", Times, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: var(--darkerGray);
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.buttonContainer > button:hover {
+  filter: brightness(1.2);
+}
+
+.buttonContainer > button:active {
+  filter: brightness(0.9);
+}
+
+.titlesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.titleContainer {
+  font-family: "Merriweather", Times, serif;
+  font-size: 2.2rem;
+  display: flex;
+  gap: 5px;
+  font-weight: 600;
+}
+
+.alternateTitlesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alternateTitlesContainer > p {
+  font-size: 1.5rem;
+}
+
+.genresContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.genresContainer > p {
+  font-size: 1.5rem;
+}
+
+.platformsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.platformsContainer > p {
+  font-size: 1.5rem;
 }
 
 .gameInfo > .descriptionContainer {
   grid-column: 1 / 3;
-  height: fit-content;
+  background-color: var(--darkerGreen);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .alternateTitles {
   list-style: disc;
   list-style-position: inside;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 1.1rem;
 }
 
-.alternateTitles > ul {
-  padding-inline-start: 40px;
+.alternateTitles > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.alternateTitles ul {
+  padding-inline-start: 10px;
   list-style-type: circle;
+  list-style-position: inside;
 }
 
 .genres {
   list-style: disc;
   list-style-position: inside;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 1.1rem;
 }
 
-.genres > ul {
-  padding-inline-start: 40px;
+.genres > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.genres ul {
+  padding-inline-start: 10px;
   list-style-type: circle;
+  list-style-position: inside;
 }
 
 .platforms {
   list-style: disc;
   list-style-position: inside;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 1.1rem;
 }
 
-.platforms > ul {
-  padding-inline-start: 40px;
+.platforms > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.platforms ul {
+  padding-inline-start: 10px;
   list-style-type: circle;
+  list-style-position: inside;
 }
