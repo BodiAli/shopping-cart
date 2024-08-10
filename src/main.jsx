@@ -10,7 +10,7 @@ import Category from "./components/Category/Category.jsx";
 import ProductPage from "./pages/ProductPage/ProductPage.jsx";
 import "./reset.css";
 
-//TODO: Implement product page
+//TODO: Make website responsive
 
 const router = createBrowserRouter([
   {
