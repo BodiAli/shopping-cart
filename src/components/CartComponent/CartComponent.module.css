@@ -190,7 +190,7 @@
 
   .cart {
     position: fixed;
-    z-index: 2;
+    z-index: 9999;
     padding: 5rem 0;
   }
 
@@ -229,6 +229,10 @@
   .checkout {
     font-size: 1.9rem;
     padding: 0.7rem 1.4rem;
+  }
+
+  .tick {
+    transform: translateX(-155%);
   }
 
   .total {
