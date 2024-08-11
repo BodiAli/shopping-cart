@@ -33,10 +33,16 @@ function ShopPage() {
   useEffect(() => {
     document.title = "Shop | GameVault";
 
+    if (isAsideOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "initial";
+    }
+
     return () => {
       document.title = "GameVault";
     };
-  }, []);
+  }, [isAsideOpen]);
 
   function handleViewAside() {
     setIsAsideOpen(!isAsideOpen);
