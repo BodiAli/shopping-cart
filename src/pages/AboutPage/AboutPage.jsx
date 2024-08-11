@@ -29,10 +29,10 @@ function AboutPage() {
       <footer className={styles.footer}>
         <p>Made by BodiAli</p>
         <div>
-          <a href="https://github.com/BodiAli">
+          <a href="https://github.com/BodiAli" target="_blank">
             <FaGithub color="#386c5f" />
           </a>
-          <a href="https://github.com/BodiAli/shopping-cart">
+          <a href="https://github.com/BodiAli/shopping-cart" target="_blank">
             <RiGitRepositoryFill color="#386c5f" />
           </a>
         </div>
