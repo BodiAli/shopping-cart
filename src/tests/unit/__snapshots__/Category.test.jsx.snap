@@ -140,7 +140,6 @@ exports[`Category component > should render correct elements 1`] = `
         </div>
       </div>
     </div>
-    ;
   </section>
 </div>
 `;

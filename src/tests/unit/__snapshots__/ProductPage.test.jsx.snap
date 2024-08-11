@@ -1,0 +1,271 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Product page component > should render correct elements 1`] = `
+<div>
+  <main
+    class="_main_973786"
+  >
+    <p
+      class="_screenshotsP_973786"
+    >
+      Game Screenshots
+    </p>
+    <section
+      aria-roledescription="carousel"
+      class="splide _carousel_973786 splide--loop splide--ltr splide--draggable is-active is-initialized"
+      data-testid="carousel"
+      id="splide01"
+    >
+      <div
+        aria-atomic="true"
+        aria-live="off"
+        class="splide__track splide__track--loop splide__track--ltr splide__track--draggable"
+        id="splide01-track"
+        style="padding-left: 0px; padding-right: 0px;"
+      >
+        <ul
+          class="splide__list"
+          id="splide01-list"
+          role="presentation"
+          style="transform: translateX(0px);"
+        >
+          <li
+            aria-label="1 of 1"
+            aria-roledescription="slide"
+            class="splide__slide splide__slide--clone is-active is-visible"
+            id="splide01-clone01"
+            role="tabpanel"
+          >
+            <div
+              class="_screenshotsContainer_973786"
+            >
+              <img
+                alt="game screenshot"
+                class="_screenshot_973786"
+                src="screenshot.jpg"
+              />
+            </div>
+          </li>
+          <li
+            aria-label="1 of 1"
+            aria-roledescription="slide"
+            class="splide__slide splide__slide--clone is-active is-visible is-prev"
+            id="splide01-clone02"
+            role="tabpanel"
+          >
+            <div
+              class="_screenshotsContainer_973786"
+            >
+              <img
+                alt="game screenshot"
+                class="_screenshot_973786"
+                src="screenshot.jpg"
+              />
+            </div>
+          </li>
+          <li
+            aria-label="1 of 1"
+            aria-roledescription="slide"
+            class="splide__slide is-active is-visible"
+            id="splide01-slide01"
+            role="tabpanel"
+          >
+            <div
+              class="_screenshotsContainer_973786"
+            >
+              <img
+                alt="game screenshot"
+                class="_screenshot_973786"
+                src="screenshot.jpg"
+              />
+            </div>
+          </li>
+          <li
+            aria-label="1 of 1"
+            aria-roledescription="slide"
+            class="splide__slide splide__slide--clone is-active is-visible is-next"
+            id="splide01-clone03"
+            role="tabpanel"
+          >
+            <div
+              class="_screenshotsContainer_973786"
+            >
+              <img
+                alt="game screenshot"
+                class="_screenshot_973786"
+                src="screenshot.jpg"
+              />
+            </div>
+          </li>
+          <li
+            aria-label="1 of 1"
+            aria-roledescription="slide"
+            class="splide__slide splide__slide--clone is-active is-visible"
+            id="splide01-clone04"
+            role="tabpanel"
+          >
+            <div
+              class="_screenshotsContainer_973786"
+            >
+              <img
+                alt="game screenshot"
+                class="_screenshot_973786"
+                src="screenshot.jpg"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul
+        aria-label="Select a slide to show"
+        class="splide__pagination splide__pagination--ltr"
+        role="tablist"
+      >
+        <li
+          role="presentation"
+        >
+          <button
+            aria-controls="splide01-slide01"
+            aria-label="Go to slide 1"
+            aria-selected="true"
+            class="splide__pagination__page is-active"
+            role="tab"
+            type="button"
+          />
+        </li>
+      </ul>
+    </section>
+    <section
+      class="_gameInfo_973786"
+    >
+      <div
+        class="_infoImgContainer_973786"
+      >
+        <img
+          alt="Minecraft game game poster"
+          src="image.jpg"
+        />
+      </div>
+      <div
+        class="_container_973786"
+      >
+        <div
+          class="_titlesContainer_973786"
+        >
+          <div
+            class="_titleContainer_973786"
+          >
+            <p>
+              Title:
+            </p>
+            <h2
+              class="_title_973786"
+            >
+              Minecraft game
+            </h2>
+          </div>
+          <div
+            class="_alternateTitlesContainer_973786"
+          >
+            <p>
+              Alternate Titles:
+            </p>
+            <ul
+              class="_alternateTitles_973786"
+            >
+              <div>
+                <li>
+                  block game
+                </li>
+                <ul>
+                  <li>
+                    another title
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="_genresContainer_973786"
+        >
+          <p>
+            Genres:
+          </p>
+          <ul
+            class="_genres_973786"
+          >
+            <div>
+              <li>
+                Basic genres
+              </li>
+              <ul>
+                <li>
+                  Adventure
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+        <div
+          class="_platformsContainer_973786"
+        >
+          <p>
+            Platforms:
+          </p>
+          <ul
+            class="_platforms_973786"
+          >
+            <div>
+              <li>
+                Windows
+              </li>
+              <ul>
+                <li>
+                  Release date: 
+                  2012
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+        <div
+          class="_buttonContainer_973786"
+        >
+          <p>
+            Price:
+          </p>
+          <p>
+            50.50
+          </p>
+          <button>
+            <svg
+              color="#01f5b8"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              style="color: rgb(1, 245, 184);"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M416 277.333H277.333V416h-42.666V277.333H96v-42.666h138.667V96h42.666v138.667H416v42.666z"
+              />
+            </svg>
+             Add to Cart
+          </button>
+        </div>
+      </div>
+      <div
+        class="_descriptionContainer_973786"
+      >
+        <p>
+          A game where you build stuff
+        </p>
+      </div>
+    </section>
+  </main>
+</div>
+`;

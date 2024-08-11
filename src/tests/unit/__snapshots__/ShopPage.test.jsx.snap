@@ -5,8 +5,15 @@ exports[`Shop page > should render correct elements 1`] = `
   <main
     class="_main_c02aaf"
   >
+    <button
+      class="_viewAsideButton_c02aaf "
+    >
+      <div
+        class="_bar_c02aaf"
+      />
+    </button>
     <aside
-      class="_aside_c02aaf"
+      class="_aside_c02aaf "
     >
       <div
         class="_viewCart_c02aaf"
@@ -14,11 +21,11 @@ exports[`Shop page > should render correct elements 1`] = `
         <h2>
           <svg
             fill="currentColor"
-            height="1.5rem"
+            height="1.5em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 512 512"
-            width="1.5rem"
+            width="1.5em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
@@ -66,11 +73,11 @@ exports[`Shop page > should render correct elements 1`] = `
       <h2>
         <svg
           fill="none"
-          height="1.3rem"
+          height="1.3em"
           stroke="currentColor"
           stroke-width="0"
           viewBox="0 0 24 24"
-          width="1.3rem"
+          width="1.3em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -111,11 +118,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="none"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 24 24"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -151,12 +158,12 @@ exports[`Shop page > should render correct elements 1`] = `
       <h2>
         <svg
           fill="currentColor"
-          height="1.3rem"
+          height="1.3em"
           role="img"
           stroke="currentColor"
           stroke-width="0"
           viewBox="0 0 24 24"
-          width="1.3rem"
+          width="1.3em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -194,11 +201,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 24 24"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -217,11 +224,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 16 16"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -236,11 +243,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 576 512"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -256,12 +263,12 @@ exports[`Shop page > should render correct elements 1`] = `
           <svg
             baseProfile="tiny"
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             version="1.2"
             viewBox="0 0 24 24"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -276,11 +283,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 448 512"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -293,11 +300,11 @@ exports[`Shop page > should render correct elements 1`] = `
       <h2>
         <svg
           fill="currentColor"
-          height="1.3rem"
+          height="1.3em"
           stroke="currentColor"
           stroke-width="0"
           viewBox="0 0 24 24"
-          width="1.3rem"
+          width="1.3em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -315,11 +322,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 512 512"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -334,11 +341,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 512 512"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -353,11 +360,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 512 512"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -372,11 +379,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 512 512"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -391,12 +398,12 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             role="img"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 24 24"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -411,11 +418,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 512 512"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -430,11 +437,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 512 512"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -449,11 +456,11 @@ exports[`Shop page > should render correct elements 1`] = `
         >
           <svg
             fill="currentColor"
-            height="1.2rem"
+            height="1.2em"
             stroke="currentColor"
             stroke-width="0"
             viewBox="0 0 512 512"
-            width="1.2rem"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
