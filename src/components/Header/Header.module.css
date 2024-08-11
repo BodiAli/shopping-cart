@@ -47,6 +47,10 @@
   filter: brightness(1.1);
 }
 
+.navContainer > a:active {
+  filter: brightness(0.9);
+}
+
 @media (max-width: 710px) {
   .header {
     gap: 20px;
