@@ -57,6 +57,14 @@
 .buttonContainer {
   margin-top: 20px;
   align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttonContainer > p {
+  font-family: "Merriweather", Times, serif;
+  font-size: 1.3rem;
 }
 
 .buttonContainer > button {
@@ -195,4 +203,63 @@
   padding-inline-start: 10px;
   list-style-type: circle;
   list-style-position: inside;
+}
+
+@media (max-width: 700px) {
+  .main {
+    padding: 1rem;
+    gap: 30px;
+  }
+
+  .carousel {
+    margin: 0;
+  }
+
+  .screenshot {
+    object-fit: contain;
+    height: 100%;
+  }
+
+  .gameInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .infoImgContainer > img {
+    width: 100%;
+  }
+
+  .gameInfo > .descriptionContainer {
+    grid-column: 1 / 2;
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .alternateTitlesContainer > p {
+    font-size: 1.9rem;
+  }
+
+  .genresContainer > p {
+    font-size: 1.9rem;
+  }
+
+  .platformsContainer > p {
+    font-size: 1.9rem;
+  }
+
+  .alternateTitles {
+    font-size: 1.4rem;
+  }
+
+  .genres {
+    font-size: 1.4rem;
+  }
+
+  .platforms {
+    font-size: 1.4rem;
+  }
+
+  .buttonContainer > button {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.6rem;
+  }
 }
