@@ -99,7 +99,7 @@
   display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 710px) {
   .main {
     grid-template-columns: 1fr;
   }
