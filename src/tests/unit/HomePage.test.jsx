@@ -3,7 +3,7 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { vi } from "vitest";
 import HomePage from "../../pages/HomePage/HomePage";
 
-const MOCK_GAMES = {
+const games = JSON.stringify({
   games: [
     {
       title: "Fifa game",
@@ -18,6 +18,10 @@ const MOCK_GAMES = {
       sample_cover: {},
     },
   ],
+});
+
+const MOCK_GAMES = {
+  contents: games,
 };
 
 // eslint-disable-next-line no-undef

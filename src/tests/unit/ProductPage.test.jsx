@@ -7,8 +7,7 @@ import Cart from "../../utils/cart";
 const cart = new Cart();
 
 const handleButtonClick = vi.fn();
-
-const MOCK_GAME = {
+const games = JSON.stringify({
   games: [
     {
       alternate_titles: [
@@ -44,6 +43,9 @@ const MOCK_GAME = {
       ],
     },
   ],
+});
+const MOCK_GAME = {
+  contents: games,
 };
 
 // eslint-disable-next-line no-undef
