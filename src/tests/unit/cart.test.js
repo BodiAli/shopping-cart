@@ -8,7 +8,7 @@ describe("Cart Class", () => {
 
   test("addProduct should push products to the array", () => {
     const cart = new Cart();
-    const product = { title: "shirt", price: 300 };
+    const product = { title: "shirt", price: 300, game_id: 1 };
     cart.addProduct(product);
     expect(cart.products.includes(product)).toBeTruthy();
     expect(cart.products.length).toBe(1);
@@ -16,8 +16,8 @@ describe("Cart Class", () => {
 
   test("removeProduct should remove products in the array", () => {
     const cart = new Cart();
-    const product1 = { title: "shirt", price: 300 };
-    const product2 = { title: "pants", price: 200 };
+    const product1 = { title: "shirt", price: 300, game_id: 1 };
+    const product2 = { title: "pants", price: 200, game_id: 2 };
     cart.addProduct(product1);
     cart.addProduct(product2);
 
@@ -30,9 +30,9 @@ describe("Cart Class", () => {
 
   test("cart should have a count property to count number of products in the products array", () => {
     const cart = new Cart();
-    const product1 = { title: "shirt" };
-    const product2 = { title: "pants" };
-    const product3 = { title: "hoodie" };
+    const product1 = { title: "shirt", game_id: 1 };
+    const product2 = { title: "pants", game_id: 2 };
+    const product3 = { title: "hoodie", game_id: 3 };
     cart.addProduct(product1);
     cart.addProduct(product2);
     cart.addProduct(product3);
@@ -41,8 +41,8 @@ describe("Cart Class", () => {
 
   test("isTheProductPresent should check if a product is in the products array", () => {
     const cart = new Cart();
-    const product1 = { title: "shirt" };
-    const product2 = { title: "pants" };
+    const product1 = { title: "shirt", game_id: 1 };
+    const product2 = { title: "pants", game_id: 2 };
 
     cart.addProduct(product1);
 
@@ -52,9 +52,9 @@ describe("Cart Class", () => {
 
   test("getAllPrices should get the prices of all products", () => {
     const cart = new Cart();
-    const product1 = { title: "shirt", price: "20.90" };
-    const product2 = { title: "pants", price: "15.22" };
-    const product3 = { title: "hoodie", price: "332.23" };
+    const product1 = { title: "shirt", price: "20.90", game_id: 1 };
+    const product2 = { title: "pants", price: "15.22", game_id: 2 };
+    const product3 = { title: "hoodie", price: "332.23", game_id: 3 };
     cart.addProduct(product1);
     cart.addProduct(product2);
     cart.addProduct(product3);
