@@ -65,7 +65,7 @@ function ProductPage() {
           <div className={styles.titlesContainer}>
             <div className={styles.titleContainer}>
               <p>Title:</p>
-              <p className={styles.title}>{game.title}</p>
+              <h2 className={styles.title}>{game.title}</h2>
             </div>
             <div className={styles.alternateTitlesContainer}>
               <p>Alternate Titles:</p>
@@ -119,6 +119,9 @@ function ProductPage() {
           </div>
 
           <div className={styles.buttonContainer}>
+            <p>
+              Price: <span>{game.originalPrice}</span>
+            </p>
             <button onClick={(e) => handleButtonClick(e, game)}>
               {cart.isTheProductPresent(game) ? (
                 <>
