@@ -8,12 +8,14 @@ class Cart {
   }
 
   removeProduct(product) {
-    const index = this.products.indexOf(product);
+    const index = this.products.findIndex((val) => {
+      return val.game_id === product.game_id;
+    });
     this.products.splice(index, 1);
   }
 
   isTheProductPresent(product) {
-    return this.products.includes(product);
+    return this.products.some((val) => val.game_id === product.game_id);
   }
 
   getAllPrices() {
