@@ -13,14 +13,17 @@ const MOCK_GAMES = {
     {
       title: "Fifa game",
       sample_cover: {},
+      game_id: 1,
     },
     {
       title: "COD game",
       sample_cover: {},
+      game_id: 2,
     },
     {
       title: "Minecraft game",
       sample_cover: {},
+      game_id: 3,
     },
   ],
 };
@@ -30,14 +33,17 @@ const MOCK_ACTION = {
     {
       title: "CSGO action",
       sample_cover: {},
+      game_id: 1,
     },
     {
       title: "COD action",
       sample_cover: {},
+      game_id: 2,
     },
     {
       title: "TF2 action",
       sample_cover: {},
+      game_id: 3,
     },
   ],
 };
