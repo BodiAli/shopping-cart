@@ -19,7 +19,7 @@ function CartComponent({
   }
 
   let content;
-  if (cart.products.length === 0) {
+  if (cart.count === 0) {
     content = <p className={styles.empty}>Cart is empty!</p>;
   } else {
     content = (
