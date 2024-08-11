@@ -96,3 +96,18 @@
 .textContainer button:active {
   filter: brightness(0.9);
 }
+
+@media (max-width: 700px) {
+  .section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 1.2rem;
+    max-height: initial;
+  }
+
+  .textContainer > h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.775);
+    min-height: 45px;
+  }
+}
