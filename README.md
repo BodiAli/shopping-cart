@@ -1,4 +1,4 @@
-<h1 align="center">GameVault</h1>
+<h1 style="text-align: center;">GameVault</h1>
 
 ![Alt text](public/preview.png)
 
