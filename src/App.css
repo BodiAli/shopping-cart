@@ -12,3 +12,9 @@
 #root {
   font-family: "Poppins", Arial, sans-serif;
 }
+
+@media (max-width: 710px) {
+  :root {
+    font-size: 11px;
+  }
+}
