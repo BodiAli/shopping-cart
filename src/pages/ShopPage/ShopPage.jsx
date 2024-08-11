@@ -25,9 +25,15 @@ import {
 import { FaPuzzlePiece } from "react-icons/fa6";
 
 function ShopPage() {
+  const [isAsideOpen, setIsAsideOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const { arr, handleButtonClick } = useOutletContext();
   const [cart, setCart] = arr;
+
+  function handleViewAside() {
+    setIsAsideOpen(!isAsideOpen);
+  }
+
   function handleViewCart() {
     setIsActive(!isActive);
   }
@@ -69,10 +75,16 @@ function ShopPage() {
 
   return (
     <main className={styles.main}>
-      <aside className={styles.aside}>
+      <button
+        onClick={handleViewAside}
+        className={`${styles.viewAsideButton} ${isAsideOpen ? styles.isActive : ""}`}
+      >
+        <div className={styles.bar}></div>
+      </button>
+      <aside className={`${styles.aside} ${isAsideOpen ? styles.isOpen : ""}`}>
         <div onClick={handleViewCart} className={styles.viewCart}>
           <h2>
-            <IoCartOutline size={"1.5rem"} />
+            <IoCartOutline size={"1.5em"} />
             View Cart
           </h2>
           <div data-testid="quantity" className={styles.count}>
@@ -80,18 +92,18 @@ function ShopPage() {
           </div>
         </div>
         <h2>
-          <CgGames size={"1.3rem"} />
+          <CgGames size={"1.3em"} />
           Games
         </h2>
         <ul className={styles.navigation}>
           <NavLink to="games">
-            <CgGames size={"1.2rem"} />
+            <CgGames size={"1.2em"} />
             Games
           </NavLink>
         </ul>
 
         <h2>
-          <SiDwavesystems size={"1.3rem"} />
+          <SiDwavesystems size={"1.3em"} />
           Platforms
         </h2>
         <ul className={styles.navigation}>
@@ -101,72 +113,72 @@ function ShopPage() {
           </NavLink>
 
           <NavLink to="mac">
-            <MdLaptopMac size={"1.2rem"} />
+            <MdLaptopMac size={"1.2em"} />
             Mac
           </NavLink>
 
           <NavLink to="linux">
-            <VscTerminalLinux size={"1.2rem"} />
+            <VscTerminalLinux size={"1.2em"} />
             Linux
           </NavLink>
 
           <NavLink to="playstation">
-            <FaPlaystation size={"1.2rem"} />
+            <FaPlaystation size={"1.2em"} />
             Playstation
           </NavLink>
 
           <NavLink to="android">
-            <TiVendorAndroid size={"1.2rem"} />
+            <TiVendorAndroid size={"1.2em"} />
             Android
           </NavLink>
 
           <NavLink to="iphone">
-            <FaAppStoreIos size={"1.2rem"} />
+            <FaAppStoreIos size={"1.2em"} />
             iPhone
           </NavLink>
         </ul>
         <h2>
-          <BiSolidCategory size={"1.3rem"} />
+          <BiSolidCategory size={"1.3em"} />
           Genres
         </h2>
         <ul className={styles.navigation}>
           <NavLink to="action">
-            <GiPistolGun size={"1.2rem"} />
+            <GiPistolGun size={"1.2em"} />
             Action
           </NavLink>
 
           <NavLink to="adventure">
-            <GiMountainRoad size={"1.2rem"} />
+            <GiMountainRoad size={"1.2em"} />
             Adventure
           </NavLink>
 
           <NavLink to="education">
-            <GiOpenBook size={"1.2rem"} />
+            <GiOpenBook size={"1.2em"} />
             Educational
           </NavLink>
 
           <NavLink to="puzzle">
-            <FaPuzzlePiece size={"1.2rem"} />
+            <FaPuzzlePiece size={"1.2em"} />
             Puzzle
           </NavLink>
 
           <NavLink to="arcade">
-            <SiApplearcade size={"1.2rem"} />
+            <SiApplearcade size={"1.2em"} />
             Arcade
           </NavLink>
 
           <NavLink to="racing">
-            <GiCarWheel size={"1.2rem"} />
+            <GiCarWheel size={"1.2em"} />
             Racing
           </NavLink>
 
           <NavLink to="simulation">
-            <Gi3dGlasses size={"1.2rem"} />
+            <Gi3dGlasses size={"1.2em"} />
             Simulation
           </NavLink>
 
           <NavLink to="strategy">
-            <GiChessKnight size={"1.2rem"} />
+            <GiChessKnight size={"1.2em"} />
             Strategy
           </NavLink>
         </ul>
