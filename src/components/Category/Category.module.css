@@ -20,6 +20,7 @@
   box-shadow: 2.8px 2.8px 10px rgba(0, 0, 0, 0.775);
   transition: transform 300ms ease, box-shadow 1000ms ease;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .card:hover {
