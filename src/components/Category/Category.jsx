@@ -72,7 +72,6 @@ function Category() {
                   </div>
                 );
               })}
-              ;
             </section>
           );
         }}
