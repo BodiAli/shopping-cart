@@ -98,6 +98,7 @@
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  flex-wrap: wrap;
 }
 
 .remove {
@@ -178,5 +179,59 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .closeButton {
+    top: 10px;
+    right: 10px;
+  }
+
+  .cart {
+    position: fixed;
+    z-index: 2;
+    padding: 5rem 0;
+  }
+
+  .container {
+    min-height: initial;
+    margin: 0;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .textContainer {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .cartInfoContainer {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .priceContainer {
+    font-size: 1.3rem;
+  }
+
+  .remove {
+    padding: 0.7rem 1.4rem;
+    font-size: 1.5rem;
+  }
+
+  .checkout {
+    font-size: 1.9rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .total {
+    font-size: 1.2rem;
   }
 }
