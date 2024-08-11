@@ -39,6 +39,11 @@ describe("Shop page", () => {
     expect(container).toMatchSnapshot();
   });
 
+  test("should change document title", () => {
+    render(<ShopPage />, { wrapper });
+    expect(document.title).toBe("Shop | GameVault");
+  });
+
   test("should render games nav", () => {
     render(<ShopPage />, { wrapper });
     expect(screen.getByRole("heading", { name: /games/i })).toBeInTheDocument();

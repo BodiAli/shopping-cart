@@ -25,6 +25,11 @@ describe("Error page", () => {
     expect(container).toMatchSnapshot();
   });
 
+  test("should change document title", () => {
+    render(<ErrorPage />, { wrapper });
+    expect(document.title).toBe("Error");
+  });
+
   test("should render correct heading", () => {
     render(<ErrorPage />, { wrapper });
     expect(screen.getByRole("heading")).toHaveTextContent(/looks like you are lost/i);
