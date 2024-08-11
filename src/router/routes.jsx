@@ -1,6 +1,11 @@
 import App from "../App";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import HomePage from "../pages/HomePage/HomePage";
+import ErrorComponent from "../components/ErrorComponent/ErrorComponent";
+import ShopPage from "../pages/ShopPage/ShopPage";
+import Category from "../components/Category/Category";
+import ProductPage from "../pages/ProductPage/ProductPage";
+import AboutPage from "../pages/AboutPage/AboutPage";
 
 const routes = [
   {
@@ -9,14 +14,35 @@ const routes = [
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
-        element: <HomePage />,
-        loader: HomePage.loader,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: "shop",
-        element: <p>HIII</p>,
+        errorElement: <ErrorComponent />,
+        children: [
+          {
+            index: true,
+            element: <HomePage />,
+            loader: HomePage.loader,
+          },
+          {
+            path: "shop",
+            element: <ShopPage />,
+            children: [
+              {
+                path: ":category",
+                element: <Category />,
+                loader: Category.loader,
+                errorElement: <ErrorComponent />,
+              },
+            ],
+          },
+          {
+            path: "product/:id",
+            element: <ProductPage />,
+            loader: ProductPage.loader,
+          },
+          {
+            path: "about",
+            element: <AboutPage />,
+          },
+        ],
       },
     ],
   },
