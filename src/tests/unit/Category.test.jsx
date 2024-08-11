@@ -24,6 +24,7 @@ const MOCK_GAMES = {
     },
   ],
 };
+
 const MOCK_ACTION = {
   games: [
     {
@@ -52,7 +53,8 @@ Category.loader = vi.fn(({ params }) => {
   }
 });
 
-const handleButtonClick = vi.fn((product) => {
+const handleButtonClick = vi.fn((e, product) => {
+  e.stopPropagation();
   if (cart.isTheProductPresent(product)) {
     cart.removeProduct(product);
   } else {
