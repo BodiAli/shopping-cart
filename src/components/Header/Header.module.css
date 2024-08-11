@@ -62,6 +62,7 @@
 
   .navContainer {
     justify-content: initial;
-    gap: 5px;
+    justify-content: center;
+    gap: 10px;
   }
 }
