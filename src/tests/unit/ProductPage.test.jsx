@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import ProductPage from "../../pages/ProductPage/ProductPage";
-import { vi, expect } from "vitest";
+import { vi } from "vitest";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import Cart from "../../utils/cart";
 
@@ -79,6 +79,16 @@ describe("Product page component", () => {
   test("should render correct elements", () => {
     const { container } = render(<ProductPage />, { wrapper });
     expect(container).toMatchSnapshot();
+  });
+
+  test("should change document title", () => {
+    render(<ProductPage />, { wrapper });
+    expect(document.title).toBe("Minecraft game | GameVault");
+  });
+
+  test("should render a back button", () => {
+    render(<ProductPage />, { wrapper });
+    expect(screen.getByRole("button", { name: /back/i })).toBeInTheDocument();
   });
 
   test("should render game screenshots", () => {
