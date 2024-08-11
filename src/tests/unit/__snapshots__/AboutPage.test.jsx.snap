@@ -27,6 +27,7 @@ exports[`AboutPage component > should render correct elements 1`] = `
     <div>
       <a
         href="https://github.com/BodiAli"
+        target="_blank"
       >
         <svg
           color="#386c5f"
@@ -46,6 +47,7 @@ exports[`AboutPage component > should render correct elements 1`] = `
       </a>
       <a
         href="https://github.com/BodiAli/shopping-cart"
+        target="_blank"
       >
         <svg
           color="#386c5f"
