@@ -48,10 +48,6 @@
 }
 
 @media (max-width: 710px) {
-  :root {
-    font-size: 11px;
-  }
-
   .header {
     gap: 20px;
   }
