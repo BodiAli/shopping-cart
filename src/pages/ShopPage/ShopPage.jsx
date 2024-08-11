@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, Outlet, useOutletContext } from "react-router-dom";
 import CartComponent from "../../components/CartComponent/CartComponent";
 import Cart from "../../utils/cart";
@@ -29,6 +29,14 @@ function ShopPage() {
   const [isActive, setIsActive] = useState(false);
   const { arr, handleButtonClick } = useOutletContext();
   const [cart, setCart] = arr;
+
+  useEffect(() => {
+    document.title = "Shop | GameVault";
+
+    return () => {
+      document.title = "GameVault";
+    };
+  }, []);
 
   function handleViewAside() {
     setIsAsideOpen(!isAsideOpen);
