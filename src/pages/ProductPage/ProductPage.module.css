@@ -6,6 +6,27 @@
   gap: 20px;
 }
 
+.backButton {
+  align-self: start;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  filter: brightness(1.1);
+}
+
+.backButton:active {
+  filter: brightness(0.9);
+}
+
 .screenshotsP {
   text-align: center;
   font-size: 2.5rem;
@@ -205,7 +226,7 @@
   list-style-position: inside;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 710px) {
   .main {
     padding: 1rem;
     gap: 30px;

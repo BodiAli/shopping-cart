@@ -1,4 +1,5 @@
-import { useLoaderData, useOutletContext } from "react-router-dom";
+import { useEffect } from "react";
+import { useLoaderData, useNavigate, useOutletContext } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import getData from "../../utils/fetchData";
 import generatePrice from "../../utils/generatePrice";
@@ -9,19 +10,35 @@ import styles from "./ProductPage.module.css";
 import noImage from "../../assets/no-image.svg";
 
 // Icons
-import { IoMdAdd, IoMdRemove } from "react-icons/io";
+import { IoMdAdd, IoMdRemove, IoMdArrowRoundBack } from "react-icons/io";
 
 function ProductPage() {
+  const navigate = useNavigate();
   const game = useLoaderData();
   const { arr, handleButtonClick } = useOutletContext();
   const [cart] = arr;
+
+  useEffect(() => {
+    document.title = `${game.title} | GameVault`;
+
+    return () => {
+      document.title = "GameVault";
+    };
+  }, [game.title]);
 
   const price = generatePrice();
   game.price = price;
   game.originalPrice = price;
   game.quantity = 1;
+
+  function handleBackButton() {
+    navigate(-1);
+  }
   return (
     <main className={styles.main}>
+      <button onClick={handleBackButton} className={styles.backButton}>
+        <IoMdArrowRoundBack /> Back
+      </button>
       <p className={styles.screenshotsP}>Game Screenshots</p>
       <Splide
         data-testid="carousel"
