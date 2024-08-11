@@ -10,6 +10,7 @@ async function getData(params) {
   }
 
   const data = await response.json();
+
   // AllOrigins wraps the response in a "contents" field
   return JSON.parse(data.contents);
 }
