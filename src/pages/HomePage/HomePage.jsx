@@ -66,7 +66,10 @@ function HomePage() {
                 <div className={styles.descriptionContainer}>
                   <h3>{item.title}</h3>
                   <p className={styles.price}>{`Price: ${item.originalPrice}$`}</p>
-                  <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  ></div>
                 </div>
               </div>
             </SplideSlide>
