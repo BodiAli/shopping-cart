@@ -48,6 +48,7 @@ function Category() {
                         }}
                       ></div>
                       <img
+                        loading="lazy"
                         src={game.sample_cover ? game.sample_cover.thumbnail_image : noImage}
                         alt={`${game.title} game poster`}
                       />
