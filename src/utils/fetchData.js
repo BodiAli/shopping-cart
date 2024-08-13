@@ -11,6 +11,10 @@ async function getData(params) {
 
   const data = await response.json();
 
+  if (!data.contents) {
+    throw new Error("Unexpected error occurred, please try again later");
+  }
+
   // AllOrigins wraps the response in a "contents" field
   return JSON.parse(data.contents);
 }
