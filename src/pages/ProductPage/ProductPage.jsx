@@ -164,9 +164,11 @@ function ProductPage() {
 async function loader({ params }) {
   try {
     const game = await getData(`?id=${params.id}&`);
-    if (game) {
-      return game.games[0];
+    if (!game.games || game.games.length === 0) {
+      throw new Error("Data not found");
     }
+
+    return game.games[0];
   } catch (error) {
     if (error.message === "Bad Request") {
       throw new Error("Data not found");
