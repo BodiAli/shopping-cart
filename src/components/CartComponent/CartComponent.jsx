@@ -9,7 +9,7 @@ function CartComponent({
   handleCartVisibility,
   handleInputChange,
   handleProductRemove,
-  removeProducts,
+  emptyCart,
 }) {
   const [checkoutAnimation, setCheckoutAnimation] = useState(false);
   const [tickAnimation, setTickAnimation] = useState(false);
@@ -73,7 +73,7 @@ function CartComponent({
               setTimeout(() => {
                 setCheckoutAnimation(false);
                 setTickAnimation(false);
-                removeProducts();
+                emptyCart();
               }, 2000);
             }}
           >
@@ -100,7 +100,7 @@ CartComponent.propTypes = {
   handleCartVisibility: PropTypes.func,
   handleInputChange: PropTypes.func.isRequired,
   handleProductRemove: PropTypes.func.isRequired,
-  removeProducts: PropTypes.func,
+  emptyCart: PropTypes.func,
 };
 
 export default CartComponent;

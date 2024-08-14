@@ -81,7 +81,7 @@ function ShopPage() {
     }
   }
 
-  function removeProducts() {
+  function emptyCart() {
     const newCart = new Cart([]);
     setCart(newCart);
     setIsActive(false);
@@ -203,7 +203,7 @@ function ShopPage() {
         handleInputChange={handleInputChange}
         isActive={isActive}
         handleProductRemove={handleProductRemove}
-        removeProducts={removeProducts}
+        emptyCart={emptyCart}
       />
       <Outlet context={{ arr, handleButtonClick }} />
     </main>
