@@ -25,6 +25,10 @@ function Category() {
     <Suspense fallback={<LoadingSpinner />}>
       <Await resolve={games}>
         {(games) => {
+          if (!games || !games.games || games.games.length === 0) {
+            throw new Error("Data not found, try again later");
+          }
+
           return (
             <section className={styles.section}>
               {games.games.map((game) => {
