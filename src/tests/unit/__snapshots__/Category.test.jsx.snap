@@ -17,7 +17,6 @@ exports[`Category component > should render correct elements 1`] = `
         />
         <img
           alt="Fifa game game poster"
-          loading="lazy"
         />
       </div>
       <div
@@ -63,7 +62,6 @@ exports[`Category component > should render correct elements 1`] = `
         />
         <img
           alt="COD game game poster"
-          loading="lazy"
         />
       </div>
       <div
@@ -109,7 +107,6 @@ exports[`Category component > should render correct elements 1`] = `
         />
         <img
           alt="Minecraft game game poster"
-          loading="lazy"
         />
       </div>
       <div
