@@ -90,6 +90,10 @@ async function loader() {
   if (!data) {
     throw new Error("Unable to fetch data");
   }
+  if (!data.games || data.games.length === 0) {
+    throw new Error("Data not found, try again later");
+  }
+
   return data.games;
 }
 
