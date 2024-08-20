@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { vi } from "vitest";
+import userEvent from "@testing-library/user-event";
 import Category from "../../components/Category/Category";
 import ErrorComponent from "../../components/ErrorComponent/ErrorComponent";
 import Cart from "../../utils/cart";
-import userEvent from "@testing-library/user-event";
 
 const cart = new Cart();
 
