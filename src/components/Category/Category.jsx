@@ -41,6 +41,7 @@ function Category() {
                     onClick={() => navigateToProduct(game.game_id)}
                     key={game.title}
                     className={styles.card}
+                    data-testid="shop-game-card"
                   >
                     <div className={styles.imageContainer}>
                       <div
