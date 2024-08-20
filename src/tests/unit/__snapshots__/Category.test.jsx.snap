@@ -7,6 +7,7 @@ exports[`Category component > should render correct elements 1`] = `
   >
     <div
       class="_card_0a39a7"
+      data-testid="shop-game-card"
     >
       <div
         class="_imageContainer_0a39a7"
@@ -52,6 +53,7 @@ exports[`Category component > should render correct elements 1`] = `
     </div>
     <div
       class="_card_0a39a7"
+      data-testid="shop-game-card"
     >
       <div
         class="_imageContainer_0a39a7"
@@ -97,6 +99,7 @@ exports[`Category component > should render correct elements 1`] = `
     </div>
     <div
       class="_card_0a39a7"
+      data-testid="shop-game-card"
     >
       <div
         class="_imageContainer_0a39a7"
