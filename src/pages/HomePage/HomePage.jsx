@@ -48,7 +48,11 @@ function HomePage() {
 
           return (
             <SplideSlide key={index}>
-              <div onClick={() => navigateToProduct(item.game_id)} className={styles.card}>
+              <div
+                data-testid="home-game-card"
+                onClick={() => navigateToProduct(item.game_id)}
+                className={styles.card}
+              >
                 <div className={styles.imageContainer}>
                   <div
                     className={styles.backGround}
