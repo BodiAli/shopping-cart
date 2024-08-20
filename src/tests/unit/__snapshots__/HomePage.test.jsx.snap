@@ -85,6 +85,7 @@ exports[`Home page default component > should render correct elements 1`] = `
           >
             <div
               class="_card_ea6e48"
+              data-testid="home-game-card"
             >
               <div
                 class="_imageContainer_ea6e48"
@@ -121,6 +122,7 @@ exports[`Home page default component > should render correct elements 1`] = `
           >
             <div
               class="_card_ea6e48"
+              data-testid="home-game-card"
             >
               <div
                 class="_imageContainer_ea6e48"
@@ -157,6 +159,7 @@ exports[`Home page default component > should render correct elements 1`] = `
           >
             <div
               class="_card_ea6e48"
+              data-testid="home-game-card"
             >
               <div
                 class="_imageContainer_ea6e48"
@@ -193,6 +196,7 @@ exports[`Home page default component > should render correct elements 1`] = `
           >
             <div
               class="_card_ea6e48"
+              data-testid="home-game-card"
             >
               <div
                 class="_imageContainer_ea6e48"
@@ -229,6 +233,7 @@ exports[`Home page default component > should render correct elements 1`] = `
           >
             <div
               class="_card_ea6e48"
+              data-testid="home-game-card"
             >
               <div
                 class="_imageContainer_ea6e48"
@@ -265,6 +270,7 @@ exports[`Home page default component > should render correct elements 1`] = `
           >
             <div
               class="_card_ea6e48"
+              data-testid="home-game-card"
             >
               <div
                 class="_imageContainer_ea6e48"
@@ -301,6 +307,7 @@ exports[`Home page default component > should render correct elements 1`] = `
           >
             <div
               class="_card_ea6e48"
+              data-testid="home-game-card"
             >
               <div
                 class="_imageContainer_ea6e48"
