@@ -21,8 +21,8 @@ class Cart {
   getAllPrices() {
     if (this.count !== 0) {
       return this.products
-        .reduce((prevVal, currentVal) => {
-          return prevVal + parseFloat(currentVal.price);
+        .reduce((total, product) => {
+          return total + parseFloat(product.price);
         }, 0)
         .toFixed(2);
     }
