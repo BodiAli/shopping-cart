@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
+import { useMemo, useState } from "react";
 import Cart from "../../utils/cart";
 import styles from "./CartComponent.module.css";
-import { useState } from "react";
 
 function CartComponent({
   cart,
@@ -13,6 +13,10 @@ function CartComponent({
 }) {
   const [checkoutAnimation, setCheckoutAnimation] = useState(false);
   const [tickAnimation, setTickAnimation] = useState(false);
+
+  const totalPrice = useMemo(() => {
+    return cart.getAllPrices();
+  }, [cart]);
 
   function handleClick() {
     setCheckoutAnimation(true);
@@ -64,7 +68,7 @@ function CartComponent({
           >
             Checkout
             <br />
-            <span className={styles.total}>Total: {cart.getAllPrices()}$</span>
+            <span className={styles.total}>Total: {totalPrice}$</span>
           </p>
 
           <p
