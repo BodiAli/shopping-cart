@@ -90,7 +90,7 @@ function HomePage() {
 }
 
 async function loader() {
-  const data = await getData("/random?limit=5&format=normal&");
+  const data = await getData("/random?limit=5&format=normal");
   if (!data) {
     throw new Error("Unable to fetch data");
   }

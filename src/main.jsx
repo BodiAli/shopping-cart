@@ -4,8 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routes from "./router/routes.jsx";
 import "./reset.css";
 
-//TODO: Make website responsive
-
 const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

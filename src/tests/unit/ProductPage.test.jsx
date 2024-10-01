@@ -7,7 +7,7 @@ import Cart from "../../utils/cart";
 const cart = new Cart();
 
 const handleButtonClick = vi.fn();
-const games = JSON.stringify({
+const games = {
   games: [
     {
       alternate_titles: [
@@ -43,10 +43,8 @@ const games = JSON.stringify({
       ],
     },
   ],
-});
-const MOCK_GAME = {
-  contents: games,
 };
+const MOCK_GAME = games;
 
 // eslint-disable-next-line no-undef
 global.fetch = vi.fn(() =>

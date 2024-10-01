@@ -89,33 +89,33 @@ async function loader({ params }) {
   if (params.category === "games") {
     return defer({ data: getData("?") });
   } else if (params.category === "windows") {
-    return defer({ data: getData("?platform=3&") });
+    return defer({ data: getData("?platform=3") });
   } else if (params.category === "mac") {
-    return defer({ data: getData("?platform=74&") });
+    return defer({ data: getData("?platform=74") });
   } else if (params.category === "linux") {
-    return defer({ data: getData("?platform=1&") });
+    return defer({ data: getData("?platform=1") });
   } else if (params.category === "playstation") {
-    return defer({ data: getData("?platform=6&") });
+    return defer({ data: getData("?platform=6") });
   } else if (params.category === "android") {
-    return defer({ data: getData("?platform=91&") });
+    return defer({ data: getData("?platform=91") });
   } else if (params.category === "iphone") {
-    return defer({ data: getData("?platform=86&") });
+    return defer({ data: getData("?platform=86") });
   } else if (params.category === "action") {
-    return defer({ data: getData("?genre=1&") });
+    return defer({ data: getData("?genre=1") });
   } else if (params.category === "adventure") {
-    return defer({ data: getData("?genre=2&") });
+    return defer({ data: getData("?genre=2") });
   } else if (params.category === "education") {
-    return defer({ data: getData("?genre=12&") });
+    return defer({ data: getData("?genre=12") });
   } else if (params.category === "puzzle") {
-    return defer({ data: getData("?genre=118&") });
+    return defer({ data: getData("?genre=118") });
   } else if (params.category === "arcade") {
-    return defer({ data: getData("?genre=9&") });
+    return defer({ data: getData("?genre=9") });
   } else if (params.category === "racing") {
-    return defer({ data: getData("?genre=6&") });
+    return defer({ data: getData("?genre=6") });
   } else if (params.category === "simulation") {
-    return defer({ data: getData("?genre=3&") });
+    return defer({ data: getData("?genre=3") });
   } else if (params.category === "strategy") {
-    return defer({ data: getData("?genre=4&") });
+    return defer({ data: getData("?genre=4") });
   }
   throw new Error("Data not found");
 }

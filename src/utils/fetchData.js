@@ -1,22 +1,14 @@
-const API_KEY = "moby_EmWCjGDKP8Zp8WkkBolB5TI6ynj";
-const PROXY_URL = "https://api.allorigins.win/get?url="; // AllOrigins proxy
-
 async function getData(params) {
-  const apiUrl = `https://api.mobygames.com/v1/games${params}api_key=${API_KEY}`;
-  const response = await fetch(`${PROXY_URL}${encodeURIComponent(apiUrl)}`);
+  // Ensure params start with a slash if they represent a sub-route
+  const url = `http://localhost:3000/api/games${params}`;
+  const response = await fetch(url);
 
   if (!response.ok) {
-    throw new Error(response.statusText);
+    throw new Error(`Error: ${response.status} ${response.statusText}`);
   }
 
   const data = await response.json();
-
-  if (!data.contents) {
-    throw new Error("Unexpected error occurred, please try again later");
-  }
-
-  // AllOrigins wraps the response in a "contents" field
-  return JSON.parse(data.contents);
+  return data; // Return the data from your server
 }
 
 export default getData;

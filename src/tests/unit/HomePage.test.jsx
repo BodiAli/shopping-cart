@@ -3,7 +3,7 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { vi } from "vitest";
 import HomePage from "../../pages/HomePage/HomePage";
 
-const games = JSON.stringify({
+const games = {
   games: [
     {
       title: "Fifa game",
@@ -18,11 +18,9 @@ const games = JSON.stringify({
       sample_cover: {},
     },
   ],
-});
-
-const MOCK_GAMES = {
-  contents: games,
 };
+
+const MOCK_GAMES = games;
 
 // eslint-disable-next-line no-undef
 global.fetch = vi.fn(() =>
