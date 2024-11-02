@@ -1,32 +1,34 @@
 import express from "express";
 import cors from "cors";
+import path from "path"; // Needed to work with file paths
+import { fileURLToPath } from "url"; // Needed for module resolution
+
+// Get __dirname when using ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors());
 
 const API_KEY = "moby_EmWCjGDKP8Zp8WkkBolB5TI6ynj";
 
-// Route to handle /api/games/random
+// Serve static files from the 'dist' directory
+app.use(express.static(path.join(__dirname, "..", "dist")));
+
+// API route for fetching random games
 app.get("/api/games/random", async (req, res) => {
   console.log("Received query:", req.query);
   try {
-    // Serialize query parameters
     const queryString = new URLSearchParams(req.query).toString();
-    // Construct the MobyGames API URL
     const apiUrl = `https://api.mobygames.com/v1/games/random?${queryString}&api_key=${API_KEY}`;
 
-    // Fetch data from MobyGames API
     const response = await fetch(apiUrl);
 
-    // Check if the response is OK
     if (!response.ok) {
       throw new Error(response.statusText);
     }
 
-    // Parse the JSON data
     const data = await response.json();
-
-    // Send the data back to the frontend
     res.json(data);
   } catch (error) {
     console.error("Error fetching data:", error.message);
@@ -34,6 +36,7 @@ app.get("/api/games/random", async (req, res) => {
   }
 });
 
+// API route for fetching games
 app.get("/api/games", async (req, res) => {
   console.log("Received query:", req.query);
   try {
@@ -47,12 +50,16 @@ app.get("/api/games", async (req, res) => {
     }
 
     const data = await response.json();
-
     res.json(data);
   } catch (error) {
     console.error("Error fetching data:", error.message);
     res.status(500).json({ error: "Failed to fetch data from MobyGames API" });
   }
+});
+
+// Fallback to serve index.html for client-side routing
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "dist", "index.html"));
 });
 
 const PORT = process.env.PORT || 3000;
