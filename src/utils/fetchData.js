@@ -1,6 +1,6 @@
 async function getData(params) {
   // Ensure params start with a slash if they represent a sub-route
-  const url = `http://localhost:3000/api/games${params}`;
+  const url = `https://vertical-kerri-bodimahdi-a9d7c6a5.koyeb.app/api/games${params}`;
   const response = await fetch(url);
 
   if (!response.ok) {
