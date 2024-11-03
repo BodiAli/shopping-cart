@@ -17,7 +17,6 @@ app.use(express.static(path.join(__dirname, "..", "dist")));
 
 // API route for fetching random games
 app.get("/api/games/random", async (req, res) => {
-  console.log("Received query:", req.query);
   try {
     const queryString = new URLSearchParams(req.query).toString();
     const apiUrl = `https://api.mobygames.com/v1/games/random?${queryString}&api_key=${API_KEY}`;
@@ -38,7 +37,6 @@ app.get("/api/games/random", async (req, res) => {
 
 // API route for fetching games
 app.get("/api/games", async (req, res) => {
-  console.log("Received query:", req.query);
   try {
     const queryString = new URLSearchParams(req.query).toString();
     const apiUrl = `https://api.mobygames.com/v1/games?${queryString}&api_key=${API_KEY}`;
@@ -64,6 +62,6 @@ app.get("*", (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
