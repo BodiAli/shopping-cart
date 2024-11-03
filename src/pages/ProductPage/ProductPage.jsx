@@ -170,11 +170,7 @@ async function loader({ params }) {
 
     return game.games[0];
   } catch (error) {
-    if (error.message === "Bad Request") {
-      throw new Error("Data not found");
-    } else {
-      throw new Error(error);
-    }
+    throw new Error("Data not found");
   }
 }
 
