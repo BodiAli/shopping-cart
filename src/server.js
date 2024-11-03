@@ -17,7 +17,6 @@ app.use(express.static(path.join(__dirname, "..", "dist")));
 
 // API route for fetching random games
 app.get("/api/games/random", async (req, res) => {
-  console.log("Received query:", req.query);
   try {
     const queryString = new URLSearchParams(req.query).toString();
     const apiUrl = `https://api.mobygames.com/v1/games/random?${queryString}&api_key=${API_KEY}`;
@@ -38,8 +37,13 @@ app.get("/api/games/random", async (req, res) => {
 
 // API route for fetching games
 app.get("/api/games", async (req, res) => {
-  console.log("Received query:", req.query);
   try {
+    const idCheck = Number(req.query.id);
+    if (isNaN(idCheck)) {
+      res.status(404).json({ error: "Bad Input" });
+      return;
+    }
+
     const queryString = new URLSearchParams(req.query).toString();
     const apiUrl = `https://api.mobygames.com/v1/games?${queryString}&api_key=${API_KEY}`;
 
@@ -57,7 +61,7 @@ app.get("/api/games", async (req, res) => {
   }
 });
 
-// Fallback to serve index.html for client-side routing
+// Serve index.html for client-side routing
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "dist", "index.html"));
 });
