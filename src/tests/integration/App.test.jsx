@@ -83,7 +83,7 @@ vi.mock("../../utils/fetchData", () => {
 
 const router = createMemoryRouter(routes);
 
-describe.only("App component", () => {
+describe("App component", () => {
   test("should go to the product page when a game card is clicked", async () => {
     const user = userEvent.setup();
     render(<RouterProvider router={router} />);

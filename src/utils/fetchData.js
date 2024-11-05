@@ -8,7 +8,7 @@ async function getData(params) {
   }
 
   const data = await response.json();
-  return data; // Return the data from your server
+  return data; // Return the data from server
 }
 
 export default getData;
