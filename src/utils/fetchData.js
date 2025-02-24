@@ -1,10 +1,11 @@
 async function getData(params) {
   // Ensure params start with a slash if they represent a sub-route
-  const url = `https://vertical-kerri-bodimahdi-a9d7c6a5.koyeb.app/api/games${params}`;
+  const url = `${import.meta.env.VITE_SERVER_URL}/api/games${params}`;
   const response = await fetch(url);
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.status} ${response.statusText}`);
+    const data = await response.json();
+    throw new Error(`Error: ${response.status} ${data.error}`);
   }
 
   const data = await response.json();
